@@ -23,7 +23,9 @@ const Navbar = () =>
             <li className="nav-item">
                 <a className="nav-link" href="../pages/Records">Our Records</a>
             </li>
-
+        </ul>
+         <ul className="nav navbar-nav navbar-right">
+            <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
     </nav>
