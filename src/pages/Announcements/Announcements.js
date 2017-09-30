@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar"
 
 
-<<<<<<< HEAD
+
 const Announcements = props => {
   <div className="container">
     <h1>Discussion</h1>
@@ -20,13 +20,13 @@ const Announcements = props => {
     </div>
   </div>;
 };
-=======
+
 const Announcements = () => {
     return(
         <Navbar/>
 
     )}
 
->>>>>>> c19f7170e8ee145de7941eb775795af2ce39e99e
+
 
 export default Announcements;
