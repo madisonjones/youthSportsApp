@@ -1,5 +1,5 @@
 import React from "react";
-require ("./schedule.css")
+require ("./TeammateLogin.css")
 
 const TeammateLogin  = () => {
 	return (

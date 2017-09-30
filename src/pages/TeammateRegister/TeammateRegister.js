@@ -1,5 +1,5 @@
 import React from "react";
-require ("./schedule.css")
+require ("./TeammateRegister.css")
 
 const TeammateRegister  = () => {
     <div className="container d-flex align-items-center" id="wrapper">
