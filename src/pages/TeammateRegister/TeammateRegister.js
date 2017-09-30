@@ -4,7 +4,7 @@ require ("./schedule.css")
 const TeammateRegister  = () => {
     <div className="container d-flex align-items-center" id="wrapper">
 		<div id="customContainer">
-		<h1 className="text-center">Sign Up</h1>
+		<h1 id="title" className="text-center">Sign Up</h1>
 
 	<div className="input-group customInput">
 	<span className="input-group-addon" id="basic-addon1">
