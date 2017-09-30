@@ -1,0 +1,37 @@
+html,
+	body {
+		height: 100%;
+		margin: 0;
+	}
+
+	#wrapper {
+		min-height: 100%;
+	}
+
+	#customContainer {
+		width: 100%;
+		min-height: 100%;
+		border: 2px solid black;
+	}
+
+	.customIcon {
+		font-size: 80px;
+	}
+
+	.customInput {
+		margin: 15px;
+	}
+
+	#title {
+		margin-bottom: 8%;
+	}
+
+	.customIconContainer {
+		margin: 10%;
+	}
+
+
+	.cardEffect:hover {
+		border: 3px solid black;
+		opacity: 0.5;
+	}
