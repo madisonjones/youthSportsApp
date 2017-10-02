@@ -45,17 +45,30 @@
 
 	.customCategory {
 		margin: 2% 0px 3% 0px;
+		color: white;
+	}
+
+	.customBackground {
+		background: #f1f2f3;
+	}
+
+	.customNavBtn {
+		color: white;
+		font-size: 20px;
+	}
+
+	.mainBackground {
+		background:#2f3031;
 	}
 
 
 
-	body,
-	html {
-		height: 100%;
-	}
+	
 
 	#sidebar {
 		min-width: 130px;
+		background:
+		#dc0000;;
 	}
 
 	.nav-link[data-toggle].collapsed:after {
