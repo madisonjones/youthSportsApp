@@ -5,6 +5,7 @@ require("./Dashboard.css");
 
 const Dashboard = () => {
     return(
+    	<div>
         <Navbar/>
         <div className="container d-flex align-items-center" id="wrapper">
 		<div id="customContainer">
@@ -48,6 +49,7 @@ const Dashboard = () => {
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
     )}
 export default Dashboard

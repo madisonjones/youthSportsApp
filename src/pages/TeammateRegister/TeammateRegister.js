@@ -30,7 +30,7 @@ const TeammateRegister  = () => {
 	/>
   </div>
 
-  <hr>
+  <hr/>
 
   <div className="input-group customInput">
 	<span className="input-group-addon" id="basic-addon1">

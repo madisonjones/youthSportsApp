@@ -5,6 +5,7 @@ require("./Announcements.css");
 
 const Announcements = props => {
   return (
+    <div>
     <Navbar />
     <div className="container-fluid h-100">
     <div className="row h-100">
@@ -87,6 +88,7 @@ const Announcements = props => {
         </div>
       </div>
     </div>
+  </div>
   </div>
     )
 };
