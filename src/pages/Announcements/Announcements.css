@@ -1,0 +1,80 @@
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+	}
+
+	#wrapper {
+		
+		width: auto;
+	}
+
+	#customContainer {
+		width: 100%;
+		height: 80vh;
+		border: 2px solid black;
+		overflow-y: scroll;
+	}
+
+	.customIcon {
+		font-size: 80px;
+	}
+
+
+	.customCard {
+		margin-top: 2%;
+	}
+
+	#title {
+		margin-bottom: 8%;
+	}
+
+	.customIconContainer {
+		margin: 10%;
+	}
+
+
+	.cardEffect:hover {
+		border: 3px solid black;
+		opacity: 0.5;
+	}
+
+	.customColor {
+		color: black;
+	}
+
+	.customCategory {
+		margin: 2% 0px 3% 0px;
+		color: white;
+	}
+
+	.customBackground {
+		background: #f1f2f3;
+	}
+
+	.customNavBtn {
+		color: white;
+		font-size: 20px;
+	}
+
+	.mainBackground {
+		background:#2f3031;
+	}
+
+
+
+	
+
+	#sidebar {
+		min-width: 130px;
+		background:
+		#dc0000;;
+	}
+
+	.nav-link[data-toggle].collapsed:after {
+		content: "▾";
+	}
+
+	.nav-link[data-toggle]:not(.collapsed):after {
+		content: "▴";
+	}
