@@ -75,7 +75,7 @@ const Manager = props => {
       <img className="d-block img-fluid rounded mx-auto d-block" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/041989-3d-transparent-glass-icon-sports-hobbies-people-hockey1-sc37.png" alt="Third slide"/>
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid rounded mx-auto d-block" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-sports-hobbies/044659-glossy-silver-icon-sports-hobbies-people-basketball23-sc29.png" alt="Third slide"/>
+      <img clclassNameass="d-block img-fluid rounded mx-auto d-block" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glossy-silver-icons-sports-hobbies/044659-glossy-silver-icon-sports-hobbies-people-basketball23-sc29.png" alt="Third slide"/>
     </div>
     <div className="carousel-item">
       <img className="d-block img-fluid rounded mx-auto d-block" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/042005-3d-transparent-glass-icon-sports-hobbies-people-volleyball.png" alt="Third slide"/>
@@ -85,9 +85,9 @@ const Manager = props => {
   </div>
 <br/>
 
-<button type="button" class="btn btn-primary btn-lg btn-block">Sign In</button>
+<button type="button" className="btn btn-primary btn-lg btn-block">Sign In</button>
 
-<button type="button" class="btn btn-secondary btn-lg btn-block">Create</button>
+<button type="button" className="btn btn-secondary btn-lg btn-block">Create</button>
 
   </div>
   );
