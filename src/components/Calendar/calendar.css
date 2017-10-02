@@ -9,6 +9,21 @@
 
 .rbc-date-cell {
     height: 70px;
+    border-color: #004344;
+    border-style: solid;
+    border-width: 0 3px 0 3px;
+    margin: 0;
+}
+
+.rbc-off-range {
+    background-color: #616969;
+}
+
+.rbc-month-row {
+    margin: 0;
+    border-width: 3px 0 3px 0;
+    border-style: solid;
+    border-color: #004344
 }
 .rbc-calendar {
     width: 100%;

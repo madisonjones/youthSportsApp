@@ -9,19 +9,19 @@ const Navbar = () =>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-                <a className="nav-link" href="/Dashboard">Dashboard <span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="/dashboard">Dashboard <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/Schedule">Schedule</a>
+                <a className="nav-link" href="/schedule/id">Schedule</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/Announcements">Coach's Announcements</a>
+                <a className="nav-link" href="/announcements/id">Coach's Announcements</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="../pages/Huddle">Team Huddle</a>
+                <a className="nav-link" href="../pages/huddle/id">Team Huddle</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="../pages/Records">Our Records</a>
+                <a className="nav-link" href="../pages/records/id">Our Records</a>
             </li>
         </ul>
          <ul className="nav navbar-nav navbar-right">
