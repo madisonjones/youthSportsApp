@@ -7,6 +7,14 @@
     z-index:1000;
 }
 
+.rbc-month-view, .rbc-time-view, .rbc-header{
+    background-color: white;
+}
+
+.rbc-toolbar {
+    background-color: white;
+}
+
 .rbc-date-cell {
     height: 70px;
     border-color: #004344;

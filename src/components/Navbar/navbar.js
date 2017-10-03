@@ -18,14 +18,14 @@ const Navbar = () =>
                 <a className="nav-link" href="/announcements/id">Coach's Announcements</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="../pages/huddle/id">Team Huddle</a>
+                <a className="nav-link" href="/huddle/id">Team Huddle</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="../pages/records/id">Our Records</a>
+                <a className="nav-link" href="/records/id">Our Records</a>
             </li>
         </ul>
          <ul className="nav navbar-nav navbar-right">
-            <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="/teammate/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
     </nav>

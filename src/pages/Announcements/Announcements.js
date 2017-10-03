@@ -11,10 +11,10 @@ const Announcements = props => {
     <div className="row h-100">
       <div className="col-2 collapse d-md-flex bg-faded pt-2 h-100" id="sidebar">
         <ul className="nav flex-column">
-          <li className="nav-item"><a className="nav-link customNavBtn" href="#">Home</a></li>
-          <li className="nav-item"><a className="nav-link customNavBtn" href="#">Announcements</a></li>
-          <li className="nav-item"><a className="nav-link customNavBtn" href="#">Discussion</a></li>
-          <li className="nav-item"><a className="nav-link customNavBtn" href="#">Highlights</a></li>
+          <li className="nav-item"><a className="nav-link customNavBtn" href="/">Home</a></li>
+          <li className="nav-item"><a className="nav-link customNavBtn" href="/announcements/id">Announcements</a></li>
+          <li className="nav-item"><a className="nav-link customNavBtn" href="/huddle/id">Discussion</a></li>
+          <li className="nav-item"><a className="nav-link customNavBtn" href="records/id">Highlights</a></li>
         </ul>
       </div>
       
