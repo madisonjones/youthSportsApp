@@ -1,8 +1,8 @@
-# The Dispensary Marketplace Community Web Application
+# The Youth Sports App
 
 # Description
 
-The DMC, aka the Dispensary Marketplace Community, exists to connect independent dispensaries with local customers by providing them with a simple and easy to use we application that will enable customers to discover dispensaries, connect, and facilitate online transactions.
+We have decided to develop a sports app that will update and display various aspects of a sports team such as: Announcements, scheduling, a gallery of photos/highlights. These three features are our core functions. We find value in having important dates, times as well as fun things related to your local or your children’s sports team being all in one place with real time updates posting to the app so that others can know what is going on if they are not able to make an event or would like to share things with other family members or friends.
 
 # GitHub Repository
 
@@ -47,21 +47,19 @@ Back-End
 	- Version Control: GitHub
 - Client-Side
 	- Structure: HTML/HTML5, JSX
-	- Styling: Basic CSS/CSS3, Bootstrap 3, Bootstrap Template
+	- Styling: Basic CSS, Bootstrap 4
 	- Interactivity: JavaScript, jQuery
 	- Dynamic Interactivity: ReactJS
 - Server-Side
 	- Back-End Scripting: NodeJS
 	- Web Server:ExpressJS
-	- Database/Document Store: MongoDB
-	- Database ORM: MongooseORM
+	- Database/Document Store: MySQL
+	- Database ORM: Sequelize
 	- Authentication: PassportJS**
 	- Deployment(Static): GitHub Pages
-	- Deployment(Dynamic): Heroku, mLab MongoDB Plug-in
+	- Deployment(Dynamic): Heroku, mLab JawsDB Plug-in
 - External APIs
-	- Google Maps
-	- Stripe
-	- Leafly**
+	
 - Development
 	- Testing:
   - Continuous Integration
@@ -71,10 +69,10 @@ Back-End
 
 - Project Management: Trello
 - Project Communication: Slack, Google Hangouts
-- Project Tools: G Suite: Google Docs, Google Slides, Google Drive, etc.
+- Project Tools Google Docs, Google Slides, Google Drive, etc.
 - Source Code & Version Control: GitHub
 - Deployment: GitHub Pages(Static/Prototype), Heroku(Dynamic/Final)
-- Text Editors: Atom, Sublime Text 3, Visual Studio Code
+- Text Editors: Visual Studio Code
 
 ## Getting Started
 
@@ -113,19 +111,18 @@ Back-End
 
 ## Authors & Contributors
 
-* **Maddy**
+* **Maddie**
 * **Joshua*
 * **Nick C**
 
 ## Acknowledgments
 
 - Instructors
-	- Pat Howard
-	- Darin
-	- Stephen Macneil
+	- Jeff Hoffman
+	
 - Teaching Assistants
-	- Nathan
-	- Michael Coomes
+	- Matt Ames
+	- Dan Oliveria
 
 ## Resources
 
