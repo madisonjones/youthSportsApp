@@ -99,6 +99,7 @@ const Announcements = props => {
       </div>
     </div>
   </div>
+  </div>
     )
 };
 

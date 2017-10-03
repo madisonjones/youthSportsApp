@@ -11,7 +11,7 @@ const Schedule  = () => {
             <div id='calendar'>
                 <MyCalendar/>
             </div>
-
+           <a ><button id="add" href="/schedule/id/add">Add to the Calendar</button></a>
         </div>
     )}
 
