@@ -1,12 +1,10 @@
-html,
-	body {
-		height: 100%;
-		margin: 0;
-	}
+body, html {
+	background: #0a1529;
+	height: 100vh;
+  margin: 0;
+}
 
-	#wrapper {
-		min-height: 100%;
-	}
+
 
 	#customContainer {
 		width: 100%;

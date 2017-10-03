@@ -1,4 +1,5 @@
 import React from "react";
+require("./Manager.css");
 
 // const customSize = {
 //     height: 374px, max-height:374px,
@@ -55,12 +56,12 @@ const Manager = props => {
     //     </div>
     //   </div>
     // </div>
-<div className="container-fluid">
-    <h1 className="text-center">Manager</h1>
+<div className="container-fluid mainContainer">
+    <h1 className="text-center title">Manager</h1>
 
     <br/>
 
-    <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" className="carousel slide customCarousel" data-ride="carousel">
     <div className="carousel-inner " role="listbox">
       <div className="carousel-item active">
         <img className="d-block img-fluid rounded mx-auto d-block" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/041933-3d-transparent-glass-icon-sports-hobbies-cup-trophy.png" alt="First slide"/>
@@ -85,9 +86,11 @@ const Manager = props => {
   </div>
 <br/>
 
-<button type="button" class="btn btn-primary btn-lg btn-block">Sign In</button>
+<p className=" btnContainer align-text-bottom">
+    <button type="button" className="btn btn-primary btn-lg btn-block customBtn">Sign In</button>
+    <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn">Create</button>
+</p>
 
-<button type="button" class="btn btn-secondary btn-lg btn-block">Create</button>
 
   </div>
   );

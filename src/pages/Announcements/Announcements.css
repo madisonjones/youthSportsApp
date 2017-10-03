@@ -1,6 +1,6 @@
 	html,
 	body {
-		height: 100%;
+		height: 100vh;
 		margin: 0;
 	}
 
@@ -52,13 +52,28 @@
 		background: #f1f2f3;
 	}
 
-	.customNavBtn {
+	.customNavBtn, .customMenuBtn {
 		color: white;
-		font-size: 20px;
+		font-size: 140%;
+		padding-left: 0px;
+		margin-top: 20%;
 	}
 
+	
+
+	.customNavBtn:hover, .customMenuBtn:hover {
+		color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	cursor:pointer
+		/* border: solid red 1px; */
+	}
+
+	.customMenuBtn:hover {
+		cursor: default;
+	}	
+
 	.mainBackground {
-		background:#2f3031;
+		background:#0a1529;
 	}
 
 
