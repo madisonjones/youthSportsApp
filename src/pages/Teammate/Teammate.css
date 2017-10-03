@@ -1,0 +1,29 @@
+.title {
+	color: white;
+}
+
+body, html {
+	background: #0a1529;
+	height: 100vh;
+}
+
+.customCarousel {
+	background: white;
+}
+
+.customBtn {
+	background: #dc0000
+}
+
+.customCreateBtn:hover {
+	background: #0875d7
+}
+
+.mainContainer {
+	height: 100vh;
+	padding-top: 2%;
+}
+
+.btnContainer {
+	padding: 0px;
+}
