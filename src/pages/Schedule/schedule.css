@@ -3,3 +3,17 @@
     left: 10%;
     position: relative;
 }
+
+#add {
+    position: relative;
+    background-color: white;
+    width: 15%;
+    left:10%;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#add:hover {
+    background-color: gray;
+}

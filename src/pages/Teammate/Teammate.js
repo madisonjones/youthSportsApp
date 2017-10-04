@@ -40,10 +40,7 @@ const Teammate  = () => {
 
 
   </div>
-
-
-    )
-}
+    )}
 
 
 

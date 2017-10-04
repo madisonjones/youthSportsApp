@@ -5,7 +5,11 @@
   "dependencies": {
     "google-auth-library": "^0.11.0",
     "googleapis": "^22.2.0",
+<<<<<<< HEAD
     "moment": "^2.18.1",
+=======
+    "mysql": "^2.14.1",
+>>>>>>> a3f1998af8f0b52d72e296dc2f094a4b7d0e7635
     "react": "^16.0.0",
     "react-big-calendar": "^0.16.1",
     "react-core-image-upload": "^2.2.2",
