@@ -8,6 +8,7 @@ body, html {
 }
 
 .customCarousel {
+	height: 60vh;
 	background: white;
 }
 
@@ -26,4 +27,9 @@ body, html {
 
 .btnContainer {
 	padding: 0px;
+}
+
+.customImg {
+	height: 60vh;
+	width: auto;
 }

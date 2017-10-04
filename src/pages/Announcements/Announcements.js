@@ -21,15 +21,10 @@ const Announcements = props => {
 
       </div>
     </div>
-<<<<<<< HEAD
     </div>
     </div>
 
 
-=======
-  </div>
-  </div>
->>>>>>> a3f1998af8f0b52d72e296dc2f094a4b7d0e7635
     )
 };
 
