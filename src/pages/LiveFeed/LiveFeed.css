@@ -1,0 +1,21 @@
+.scoreContainer {
+
+    padding: 0 10% 0 10%;
+}
+
+.customScore {
+    color: white;
+}
+
+.scoreBackground {
+    height: 30vh;
+    margin-bottom:3%;
+    background-image: url(https://ak6.picdn.net/shutterstock/videos/2082533/thumb/1.jpg);
+    background-size: cover;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#customContainer {
+    height: 50vh;
+}

@@ -6,14 +6,16 @@ body, html {
 
 
 
-	#customContainer {
+	#myCustomContainer {
+		/* height: 100vh; */
 		width: 100%;
-		min-height: 100%;
-		border: 2px solid black;
+		/* min-height: 100%; */
+		
 	}
 
 	.customIcon {
 		font-size: 80px;
+		color: #dc0000;
 	}
 
 	.customInput {
@@ -25,7 +27,8 @@ body, html {
 	}
 
 	.customIconContainer {
-		margin: 10%;
+		margin: 50px;
+		
 	}
 
 

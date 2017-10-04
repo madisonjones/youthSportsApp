@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.mainContainer {
+    height: 100vh;
+    padding-top: 0px;
+    
+}
+
+
+#title {
+    margin-bottom: 8%;
+}
+
+
+
+.customColor {
+    color: black;
+}
+
+.customCategory {
+    margin: 2% 0px 3% 0px;
+    color: white;
+}
+
+
+
+.mainBackground {
+    background:#0a1529;
+}

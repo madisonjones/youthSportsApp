@@ -1,0 +1,19 @@
+#customWrapper {
+    height: auto;
+    width: auto;
+}
+
+#customContainer {
+    width: 100%;
+    height: 65vh;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+
+.customCard {
+    margin-top: 2%;
+}
+
+.customBackground {
+    background: #f1f2f3;
+}
