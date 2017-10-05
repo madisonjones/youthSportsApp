@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../../components/Navbar"
 import MyCalendar from "../../components/Calendar"
+import Footer from "../../components/Footer"
+
 require ("./schedule.css")
 
 
@@ -11,7 +13,8 @@ const Schedule  = () => {
             <div id='calendar'>
                 <MyCalendar/>
             </div>
-           <a ><button id="add" href="/schedule/id/add">Add to the Calendar</button></a>
+           <button id="add"><a href="schedule/:id/add">Add to the Calendar</a></button>
+           <Footer/>
         </div>
     )}
 

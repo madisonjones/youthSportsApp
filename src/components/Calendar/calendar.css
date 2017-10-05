@@ -9,6 +9,7 @@
 
 .rbc-month-view, .rbc-time-view, .rbc-header{
     background-color: white;
+    border-radius: 5px;
 }
 
 .rbc-toolbar {
@@ -21,6 +22,7 @@
     border-style: solid;
     border-width: 0 3px 0 3px;
     margin: 0;
+    border-radius: 5px;
 }
 
 .rbc-off-range {
@@ -41,4 +43,5 @@
 
 .rbc-header {
     height: 50px;
+    border-radius: 5px;
 }

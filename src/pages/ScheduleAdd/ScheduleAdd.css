@@ -1,6 +1,18 @@
 .formDiv {
+    position: relative;
     width: 80%;
     left: 10%;
     background-color: white;
     color: #ff410D;
+    padding: 10px;
+    border-style: solid;
+    border-color: #E81B0C;
+    border-width: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.col-sm-6 {
+    padding-left: 0px;
 }

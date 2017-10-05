@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer"
 require("./Manager.css");
 
 // const customSize = {
@@ -42,7 +43,7 @@ const Manager = props => {
   <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn">Create</button>
 </p>
 
-
+<Footer/>
 </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar";
 import SideNav from "../../components/SideNav";
 import Messages from "../../components/Messages";
@@ -22,6 +23,7 @@ const Announcements = props => {
       </div>
     </div>
     </div>
+    <Footer/>
     </div>
 
 

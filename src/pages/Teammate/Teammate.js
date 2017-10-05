@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../../components/Footer"
+
 require("./Teammate.css");
 
 const Teammate  = () => {
@@ -34,11 +36,11 @@ const Teammate  = () => {
 <br/>
 
 <p className=" btnContainer align-text-bottom">
-    <button type="button" className="btn btn-primary btn-lg btn-block customBtn">Sign In</button>
-    <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn">Create</button>
+    <button type="button" className="btn btn-primary btn-lg btn-block customBtn"><a href="/teammatelogin">Sign In</a></button>
+    <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn"><a href="/teammateregister">Create</a></button>
 </p>
 
-
+<Footer/>
   </div>
     )}
 
