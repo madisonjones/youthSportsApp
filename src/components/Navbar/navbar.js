@@ -26,7 +26,7 @@ const Navbar = () =>
             </li>
         </ul>
          <ul className="nav navbar-nav navbar-right">
-            <li><a href="/teammate/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="/"><span className="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
     </div>
     </nav>

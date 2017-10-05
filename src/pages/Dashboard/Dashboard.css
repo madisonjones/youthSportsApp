@@ -38,3 +38,10 @@ body, html {
 		border: 3px solid black;
 		opacity: 0.5;
 	}
+
+	.card {
+		border-style: solid;
+		border-width: 4px;
+		border-radius: 5px;
+		border-color: #FF410D;
+	}

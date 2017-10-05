@@ -6,6 +6,7 @@ require("./Teammate.css");
 const Teammate  = () => {
     return (
         <div className="container-fluid mainContainer">
+          <div className="cont">
     <h1 className="text-center title">Teammate</h1>
 
     <br/>
@@ -36,10 +37,10 @@ const Teammate  = () => {
 <br/>
 
 <p className=" btnContainer align-text-bottom">
-    <button type="button" className="btn btn-primary btn-lg btn-block customBtn"><a href="/teammatelogin">Sign In</a></button>
-    <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn"><a href="/teammateregister">Create</a></button>
+    <button type="button" className="btn btn-primary btn-lg btn-block customBtn"><a href="/teammate/login">Sign In</a></button>
+    <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn"><a href="/teammate/register">Create</a></button>
 </p>
-
+</div>
 <Footer/>
   </div>
     )}

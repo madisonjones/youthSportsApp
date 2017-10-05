@@ -7,15 +7,20 @@ const jwks = require('jwks-rsa');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-require('sequelize')
+const Sequelize = require('sequelize')
+const apiroutes = require ("./routes/apiroutes")
+const db = require("./models");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-const sequelize = ('youthSports', 'root', 'password!23', {
+app.use("/api", apiroutes);
+
+
+var sequelize = new Sequelize('youthSports', 'root', 'password!23', {
   host: 'localhost',
-  dialect: 'mysql'|'sqlite'|'postgres'|'mssql',
+  dialect: 'mysql',
 
   pool: {
     max: 10,
@@ -49,7 +54,10 @@ const authCheck = jwt({
 });
 
 app.get('/client/src/pages/ManagerLogin', (req, res) => {
+});
 
 
 app.listen(3333);
-console.log('Listening on localhost:3333')})
+console.log('Listening on localhost:3333')
+
+module.exports = sequelize;

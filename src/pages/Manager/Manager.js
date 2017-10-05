@@ -9,6 +9,7 @@ require("./Manager.css");
 const Manager = props => {
   return (
   <div className="container-fluid mainContainer">
+    <div className="cont">
   <h1 className="text-center title">Manager</h1>
 
   <br/>
@@ -39,10 +40,10 @@ const Manager = props => {
 <br/>
 
 <p className=" btnContainer align-text-bottom">
-  <button type="button" className="btn btn-primary btn-lg btn-block customBtn">Sign In</button>
-  <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn">Create</button>
+  <button type="button" className="btn btn-primary btn-lg btn-block customBtn"><a href="/manager/login">Sign In</a></button>
+  <button type="button" className="btn btn-secondary btn-lg btn-block customCreateBtn"><a href="manager/register">Create</a></button>
 </p>
-
+</div>
 <Footer/>
 </div>
   );

@@ -6,7 +6,6 @@ require ("./home.css")
 const Home = () => {
     return(
         <div>
-        <Navbar/>
         <div id="welcomeMessage">
         <h1>Welcome to Homebase!</h1>
         <h2>Login or Register to see your team's clubhouse!</h2><br/>
