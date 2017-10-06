@@ -14,9 +14,11 @@ require("./LiveFeed.css");
 
 const store = createStore(counter)
 
+// const LiveFeed = () => ReactDOM.render(
+
 const LiveFeed = () => {
   return (
-    <div>
+<div>
       <Navbar />
       {/* <Upload /> */}
       <form action="/livefeed/:id/:time" method="POST">
@@ -124,9 +126,16 @@ const LiveFeed = () => {
         </div>
       </div>
     </div>
-  );
-  LiveFeed()
-  store.subscribe(LiveFeed)
-};
+    // rootEl
+    // ) 
+        )
+    }
+  
+  
+    
+  
+//   LiveFeed()
+//   store.subscribe(LiveFeed)
+
 
 export default LiveFeed;

@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../../components/Footer"
+
 require ("./TeammateRegister.css")
 
 const TeammateRegister  = () => {
@@ -48,6 +50,7 @@ const TeammateRegister  = () => {
 	<br/>
   <button type="button" className="btn btn-primary btn-lg rounded mx-auto d-block">Submit</button>
   </div>
+<Footer/>
 </div>
 
 }

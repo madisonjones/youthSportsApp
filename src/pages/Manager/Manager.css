@@ -33,3 +33,13 @@ body, html {
 	height: 60vh;
 	width: auto;
 }
+
+.btnContainer {
+	margin-bottom: 80px;
+}
+
+.cont {
+	position: relative;
+	width: 60%;
+	left: 20%;
+}

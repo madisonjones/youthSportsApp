@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import SideNav from "../../components/SideNav";
+import Footer from "../../components/Footer"
+
 import Messages from "../../components/Messages";
 import { Link } from 'react-router-dom';
 require("./Huddle.css");
@@ -21,6 +23,7 @@ const Huddle = props => {
           </div>
         </div>
         </div>
+        <Footer/>
         </div>
     )}
 

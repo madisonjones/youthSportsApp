@@ -9,7 +9,7 @@ import TeammateLogin from "./pages/TeammateLogin";
 import TeammateRegister from "./pages/TeammateRegister";
 import Dashboard from "./pages/Dashboard";
 import Schedule from "./pages/Schedule";
-import ScheduleAdd from "./pages/ScheduleAdd"
+import ScheduleAdd from "./pages/ScheduleAdd";
 import Announcements from "./pages/Announcements";
 import Huddle from "./pages/Huddle";
 import Records from "./pages/Records";
@@ -34,7 +34,7 @@ const App = () => {
         <Route exact path = "/schedule/:id/add" component = {ScheduleAdd}/>
         <Route exact path = "/announcements/:id" component = {Announcements}/>
         <Route exact path = "/huddle/:id" component = {Huddle}/>
-        <Route exact path = "/record/:id" component = {Records}/>
+        <Route exact path = "/records/:id" component = {Records}/>
         <Route exact path = "/livefeed/:id/:time" component = {LiveFeed}/>
         <Route component={NoMatch} />
       </Switch>

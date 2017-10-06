@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer"
 require("./Dashboard.css");
 
 
@@ -14,7 +15,7 @@ const Dashboard = () => {
           <div className="card-block d-flex flex-column">
           <a className="nav-link" href="/announcements/id">
             <i className="fa fa-bullhorn customIcon p-2 d-flex justify-content-center" aria-hidden="true"></i>
-            <h3 className="p-2 text-center">Announcments</h3>
+            <h3 className="p-2 text-center">Announcements</h3>
             </a>
           </div>
         </div>
@@ -56,6 +57,7 @@ const Dashboard = () => {
       </div>
     </div>
   </div>
+  <Footer/>
 </div>
 	
     )}
