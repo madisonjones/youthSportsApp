@@ -8,6 +8,7 @@ const imgFile = require("./routes/imgFile.js");
 app.use("/imgFile", imgFile);
 
 
+const morgan = require("morgan");
 
 
 const jwt = require('express-jwt');
@@ -22,6 +23,8 @@ const db = require("./models");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+app.use(morgan('dev'));
+app.use(express.static(__dirname, 'public'));
 
 app.use("/api", apiroutes);
 
@@ -68,7 +71,6 @@ app.get('/client/src/pages/ManagerLogin', (req, res) => {
 app.listen(3333);
 console.log('Listening on localhost:3333')
 
-<<<<<<< HEAD
 // app.listen(3333);
 // console.log('Listening on localhost:3333')};
 
@@ -110,6 +112,4 @@ console.log('Listening on localhost:3333')
 //    .then(response => res.status(200).json(response.data.data))
 //    .catch((error) => res.status(500).json(error.response.data));
 // });
-=======
 module.exports = sequelize;
->>>>>>> 0391b224cd68f163c590c843e0491706d555900b

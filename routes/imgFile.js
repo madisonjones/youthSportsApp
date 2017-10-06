@@ -2,42 +2,14 @@ var express = require('express')
 var app = express()
 var router = express.Router();
 var multer  = require('multer')
+var upload = multer({ dest: "../files"})
 
 
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'files/')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now() + ".jpg")
-    }
-  })
-  
-  var upload = multer({ storage: storage }.single('timelineImg'))
 
-  
-  router.post('/livefeed/:id/:time', function (req, res) {
-    let files = {
-        img: fs.readFileSync(req.file.path),
-        imgType: req.file.mimetype
-      };
-      let myPost = {...req.body, ...files};
-      Post.create(myPost).then(post => {
-        console.log(post);
-        res.redirect('/');
-      });
-    upload(req, res, function (err) {
-      if (err) {
-        // An error occurred when uploading
-      }
-      res.json({
-          success: true,
-          message: "image uploaded"
-      })
-  
-      // Everything went fine
-    });
-  });
+
+router.post("/livefeed/:id/:time", upload.single("timelineImg"), function(req, res, next) {
+    console.log(req.file);
+})
 
   router.get('/livefeed/:id/:time', function (req, res, next) {
     let id = req.params.id;

@@ -103,13 +103,6 @@ const LiveFeed = () => {
                 </div>
               </li>
 
-              {/* <li className="nav-item customNavBtn"><i className="fa fa-home" aria-hidden="true"></i> Home</li>
-              
-              <li className="nav-item customNavBtn"><i className="fa fa-bullhorn" aria-hidden="true"></i> Updates</li>
-              
-              <li className="nav-item customNavBtn"><i className="fa fa-comments-o" aria-hidden="true"></i> Discussion</li>
-    
-              <li className="nav-item customNavBtn"><i className="fa fa-history" aria-hidden="true"></i> Highlights</li> */}
             </ul>
           </div>
 
@@ -119,23 +112,20 @@ const LiveFeed = () => {
           onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
           onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
         />
-            {/* <h1 className="customColor text-center customCategory">LiveFeed</h1>
-            <a href="" data-target="#sidebar" data-toggle="collapse" className="hidden-md-up"><i className="fa fa-bars"></i></a> */}
+
             <Messages />
           </div>
         </div>
       </div>
     </div>
-    // rootEl
-    // ) 
+
         )
     }
   
   
     
   
-//   LiveFeed()
-//   store.subscribe(LiveFeed)
+
 
 
 export default LiveFeed;
