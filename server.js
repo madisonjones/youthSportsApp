@@ -3,12 +3,9 @@
 const express = require('express');
 const app = express();
 const imgFile = require("./routes/imgFile.js");
+const fs = require("fs")
 
-
-app.use("/imgFile", imgFile);
-
-
-
+//app.use("/imgFile", imgFile);
 
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
@@ -17,16 +14,21 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const Sequelize = require('sequelize')
 const apiroutes = require ("./routes/apiroutes")
-const db = require("./models");
+//const db = require("./models");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+
+
 app.use("/api", apiroutes);
 
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('public', 'index.html'))
+})
 
-var sequelize = new Sequelize('youthSports', 'root', 'password!23', {
+var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
   host: 'localhost',
   dialect: 'mysql',
 
@@ -45,6 +47,7 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
+
 
 
 const authCheck = jwt({
@@ -68,11 +71,10 @@ app.get('/client/src/pages/ManagerLogin', (req, res) => {
 app.listen(3333);
 console.log('Listening on localhost:3333')
 
-<<<<<<< HEAD
 // app.listen(3333);
 // console.log('Listening on localhost:3333')};
 
-// import axios from 'axios';
+//  import axios from 'axios';
 // import multer from 'multer';
 
 
@@ -109,7 +111,5 @@ console.log('Listening on localhost:3333')
 //   })
 //    .then(response => res.status(200).json(response.data.data))
 //    .catch((error) => res.status(500).json(error.response.data));
-// });
-=======
+// }); 
 module.exports = sequelize;
->>>>>>> 0391b224cd68f163c590c843e0491706d555900b

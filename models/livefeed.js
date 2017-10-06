@@ -10,16 +10,16 @@ var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
   }
 });
 
-var Announcements = sequelize.define("Announcements", {
+var Livefeed = sequelize.define("Livefeed", {
+    userID: Sequelize.INTEGER,
     title: Sequelize.STRING,
-    comment: Sequelize.STRING,
+    comment: Sequelize.INTEGER,
     createdAt: Sequelize.DATE,
-    teamID: Sequelize.STRING
+    ourScore: Sequelize.INTEGER,
+    theirScore: Sequelize.INTEGER
 })
 
+Livefeed.sync({force: true})
 
 
-Announcements.sync({force: true})
-
-
-module.exports = Announcements
+module.exports = Livefeed
