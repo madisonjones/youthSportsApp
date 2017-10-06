@@ -2,6 +2,13 @@
 
 const express = require('express');
 const app = express();
+const imgFile = require("./routes/imgFile.js");
+
+
+app.use("/imgFile", imgFile);
+
+
+
 // const jwt = require('express-jwt');
 // const jwks = require('jwks-rsa');
 // const cors = require('cors');
@@ -50,3 +57,42 @@ connection.connect(function(err) {
 
 // app.listen(3333);
 // console.log('Listening on localhost:3333')};
+
+// import axios from 'axios';
+// import multer from 'multer';
+
+
+/**
+ ... express.js boilerplate
+ routes, middlewares, helpers, loggers, etc
+**/
+
+// configuring Multer to use files directory for storing files
+// this is important because later we'll need to access file path
+// const storage = multer.diskStorage({
+//   destination: './files',
+//   filename(req, file, cb) {
+//     cb(null, `${new Date()}-${file.originalname}`);
+//   },
+// });
+
+// const upload = multer({ storage });
+
+// express route where we receive files from the client
+// passing multer middleware
+// app.post('/files', upload.single('file'), (req, res) => {
+//  const file = req.file; // file passed from client
+//  const meta = req.body; // all other values passed from the client, like name, etc..
+ 
+ // send the data to our REST API
+//  axios({
+//     url: `https://api.myrest.com/uploads`,
+//     method: 'post',
+//     data: {
+//       file,
+//       name: meta.name,      
+//     },
+//   })
+//    .then(response => res.status(200).json(response.data.data))
+//    .catch((error) => res.status(500).json(error.response.data));
+// });
