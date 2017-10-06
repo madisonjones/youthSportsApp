@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from 'react-dom'
-import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar";
 import SideNav from "../../components/SideNav";
 import Messages from "../../components/Messages";
@@ -13,9 +12,7 @@ require("./LiveFeed.css");
 
 
 
-let store;
-
-store = createStore(counter)
+const store = createStore(counter)
 
 // const LiveFeed = () => ReactDOM.render(
 
@@ -117,18 +114,17 @@ const LiveFeed = () => {
           </div>
 
           <div className="col pt-2">
-          {/* <Counter
+          <Counter
           value={store.getState()}
           onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
           onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-        /> */}
+        />
             {/* <h1 className="customColor text-center customCategory">LiveFeed</h1>
             <a href="" data-target="#sidebar" data-toggle="collapse" className="hidden-md-up"><i className="fa fa-bars"></i></a> */}
             <Messages />
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
     // rootEl
     // ) 
