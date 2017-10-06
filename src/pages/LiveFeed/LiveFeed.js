@@ -1,21 +1,40 @@
 import React from "react";
+import ReactDOM from 'react-dom'
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar";
 import SideNav from "../../components/SideNav";
 import Messages from "../../components/Messages";
 import { Link } from "react-router-dom";
+import Upload from "../../cloud/uploadFile.js";
+import { createStore } from 'redux'
+import Counter from '../../components/ScoreBoard/counter.js'
+import counter from '../../reducers/index.js'
 require("./LiveFeed.css");
+
+
+
+let store;
+
+store = createStore(counter)
+
+// const LiveFeed = () => ReactDOM.render(
 
 const LiveFeed = () => {
   return (
-    <div>
+<div>
       <Navbar />
+      {/* <Upload /> */}
+      <form action="/livefeed/:id/:time" method="POST">
+    <input type="file" name="myPic" required />
+    <input type="submit" value="Submit" />
+</form>
       <div className="container-fluid mainContainer">
         <div className="row h-100">
           <div
             className="col-2 collapse d-md-flex bg-faded w-100 p-3"
             id="sidebar"
           >
+
             <ul className="nav flex-column">
               <li className="nav-item customMenuBtn">
                 <button
@@ -57,7 +76,9 @@ const LiveFeed = () => {
                   aria-hidden="true"
                 >
                   <div class="modal-dialog modal-lg">
-                    <div class="modal-content"><p>Image</p></div>
+                    <div class="modal-content">
+                    <input type="file" onChange={this.handleFileUpload} />
+                    </div>
                   </div>
                 </div>
               </li>
@@ -96,27 +117,11 @@ const LiveFeed = () => {
           </div>
 
           <div className="col pt-2">
-            <div className="d-flex justify-content-between scoreContainer scoreBackground">
-              <div>
-                <div className="d-flex flex-column">
-                  <h1 className="p-2 text-center customScore">Team 1</h1>
-                  <h1 className="p-2 text-center customScore">18</h1>
-                </div>
-              </div>
-
-              <div className="d-flex align-items-center">
-                <div className="d-flex justify-content-center">
-                  <h1 className="customScore">1st</h1>
-                </div>
-              </div>
-
-              <div>
-                <div className="d-flex flex-column">
-                  <h1 className="p-2 text-center customScore">Team 1</h1>
-                  <h1 className="p-2 text-center customScore">20</h1>
-                </div>
-              </div>
-            </div>
+          {/* <Counter
+          value={store.getState()}
+          onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+          onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+        /> */}
             {/* <h1 className="customColor text-center customCategory">LiveFeed</h1>
             <a href="" data-target="#sidebar" data-toggle="collapse" className="hidden-md-up"><i className="fa fa-bars"></i></a> */}
             <Messages />
@@ -125,7 +130,16 @@ const LiveFeed = () => {
       </div>
       <Footer/>
     </div>
-  );
-};
+    // rootEl
+    // ) 
+        )
+    }
+  
+  
+    
+  
+//   LiveFeed()
+//   store.subscribe(LiveFeed)
+
 
 export default LiveFeed;
