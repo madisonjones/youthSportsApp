@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom'
+import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar";
 import SideNav from "../../components/SideNav";
 import Messages from "../../components/Messages";
@@ -125,6 +126,7 @@ const LiveFeed = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
     // rootEl
     // ) 
