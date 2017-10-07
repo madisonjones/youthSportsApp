@@ -8,7 +8,7 @@ require("./Manager.css");
 
 const Manager = props => {
   return (
-  <div className="container-fluid mainContainer">
+  <div className="main">
     <div className="cont">
   <h1 className="text-center title">Manager</h1>
 

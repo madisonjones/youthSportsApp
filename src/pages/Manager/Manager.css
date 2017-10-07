@@ -10,6 +10,10 @@ body, html {
 .customCarousel {
 	height: 60vh;
 	background: white;
+	border-style: solid;
+	border-color: #FF410D;
+	border-width: 5px;
+	border-radius: 8px;
 }
 
 .customBtn {
@@ -20,9 +24,17 @@ body, html {
 	background: #0875d7
 }
 
+.carousel-inner {
+	position: relative;
+	height: 100%;
+}
+.carousel-item{
+	position: relative;
+	height: 100%;
+}
+
 .mainContainer {
 	height: 100vh;
-	padding-top: 2%;
 }
 
 .btnContainer {
@@ -30,8 +42,8 @@ body, html {
 }
 
 .customImg {
-	height: 60vh;
-	width: auto;
+	height: 80%;
+	width: 80%;
 }
 
 .btnContainer {

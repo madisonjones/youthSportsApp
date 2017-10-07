@@ -6,8 +6,9 @@ import Messages from "../../components/Messages";
 import { Link } from 'react-router-dom';
 require("./Announcements.css"); 
 
-
 const Announcements = props => {
+
+
   return (
     <div>
     <Navbar />
