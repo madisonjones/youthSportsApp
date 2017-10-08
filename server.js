@@ -6,7 +6,7 @@ const imgFile = require("./routes/imgFile.js");
 const fs = require("fs")
 
 
-app.use("/imgFile", imgFile);
+// app.use("/imgFile", imgFile);
 
 
 const morgan = require("morgan");
@@ -119,9 +119,6 @@ console.log('Listening on localhost:3333')
 //   })
 //    .then(response => res.status(200).json(response.data.data))
 //    .catch((error) => res.status(500).json(error.response.data));
-<<<<<<< HEAD
 // });
-=======
 // }); 
->>>>>>> 8345f013a4f217591616c9506d31eb3a4f980f41
 module.exports = sequelize;

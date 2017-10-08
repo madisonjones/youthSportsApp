@@ -36,4 +36,16 @@ router.get("/announcements", function(req, res) {
 })
 
 
+//post from livefeed
+router.post('/livefeed/:id/:time', function(req, res) {
+    // Get sent data.
+    var post = req.body;
+    // Do a MySQL query.
+    var query = connection.query('INSERT INTO users SET ?', post, function(err, result) {
+      // Neat!
+    });
+    res.end('Success');
+  });
+
+
 module.exports = router

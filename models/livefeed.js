@@ -13,7 +13,7 @@ var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
 var Livefeed = sequelize.define("Livefeed", {
     userID: Sequelize.INTEGER,
     title: Sequelize.STRING,
-    comment: Sequelize.INTEGER,
+    comment: Sequelize.STRING,
     createdAt: Sequelize.DATE,
     ourScore: Sequelize.INTEGER,
     theirScore: Sequelize.INTEGER
