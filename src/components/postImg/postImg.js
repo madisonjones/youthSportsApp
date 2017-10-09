@@ -1,4 +1,9 @@
 import React from "react";
+import Counter from "../ScoreBoard/counter.js"
+import { createStore } from "redux";
+import counter from "../../reducers/index.js";
+
+const store = createStore(counter);
 
 class PostImg extends React.Component {
   constructor() {
@@ -38,7 +43,8 @@ class PostImg extends React.Component {
       method: "POST",
       posts: {
         img: self.refs.img,
-        comment: self.refs.comment
+        comment: self.refs.comment,
+        score: self.refs.score
       }
     })
       .then(function(response) {
@@ -96,6 +102,17 @@ class PostImg extends React.Component {
                   ref="comment"
                 />
               </div>
+              <div className="form-group">
+                <h1 className="text-center">
+                  Update Game
+                  </h1>
+              <Counter
+              ref="score"
+            value={store.getState()}
+            onIncrement={() => store.dispatch({ type: "INCREMENT" })}
+            onDecrement={() => store.dispatch({ type: "DECREMENT" })}
+          />
+                </div>
               <button type="submit" class="btn btn-primary btn-lg btn-block">
                 Submit
               </button>

@@ -4572,6 +4572,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lightbox2@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/lightbox2/-/lightbox2-2.9.0.tgz#f9a2fdb41ab3ca94bf0f769210b59bb14a5d5f62"
+
 limiter@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.2.tgz#229d8055891c8b11af9e0ee5200e8e09bb3dcbeb"
