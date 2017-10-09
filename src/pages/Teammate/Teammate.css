@@ -6,11 +6,11 @@ body, html {
 	background: #0a1529;
 	height: 100vh;
 }
-
+/* 
 .customCarousel {
 	height: 60vh;
-	background: white;
-}
+	background: rgb(255, 255, 255);
+} */
 
 .customBtn {
 	background: #dc0000

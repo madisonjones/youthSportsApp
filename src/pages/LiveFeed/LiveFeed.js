@@ -22,10 +22,10 @@ const LiveFeed = () => {
     <div>
       <Navbar />
       {/* <Upload /> */}
-      <form action="/livefeed/:id/:time" method="POST">
+      {/* <form action="/livefeed/:id/:time" method="POST">
         <input type="file" name="myPic" required />
         <input type="submit" value="Submit" />
-      </form>
+      </form> */}
 
       <div className="row h-100">
 

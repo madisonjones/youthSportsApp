@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "../../components/Carousel";
 
 class PostMessage extends React.Component {
   constructor() {
@@ -38,22 +39,13 @@ class PostMessage extends React.Component {
         <div className="modal-dialog modal-lg">
           <div className="modal-content customPopup">
             <form>
-              <div className="form-group">
-                <img
-                  src="https://photos-images.active.com/file/1/454/4546816/optimized/1e9e6153-eb0d-4a80-962c-a644d505caa3.jpg"
-                  class="rounded mx-auto d-block"
-                  alt="kid playing baseball"
-                />
-                <label for="exampleInputFile">File input</label>
-                <input
-                  type="file"
-                  className="form-control-file"
-                  id="exampleInputFile"
-                  aria-describedby="fileHelp"
-                />
-                <small id="fileHelp" className="form-text text-muted">
-                  Upload your favorite image, leave a comment then press submit
-                </small>
+            <div className="form-group">
+
+           <Carousel />
+
+
+
+                
               </div>
               <div className="form-group">
                 <label for="exampleTextarea">Message</label>
