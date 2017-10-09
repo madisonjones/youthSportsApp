@@ -3,7 +3,13 @@ require ("./footer.css")
 
 const Footer =() =>{ 
     return(
-    <div id="footer">Created by Madison Jones, Nick Constantino, and Joshua Proctor <br/> 2017</div>
-    )}
+    <footer id="footer" className="w-100 p-3 fixed-bottom">
+        <div className="container">
+            <p>
+        Created by Madison Jones, Nick Constantino, and Joshua Proctor <br/> 2017
+        </p>
+        </div>
+        </footer>
+)}
 
 export default Footer

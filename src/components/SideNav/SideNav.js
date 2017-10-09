@@ -9,7 +9,7 @@ const SideNav = () => {
               <li className="nav-item"><a className="nav-link customNavBtn" href="/dashboard/id"><i className="fa fa-home" aria-hidden="true"></i> Home</a></li>
               <li className="nav-item"><a className="nav-link customNavBtn" href="/announcements/id"><i className="fa fa-bullhorn" aria-hidden="true"></i> Updates</a></li>
               <li className="nav-item"><a className="nav-link customNavBtn" href="/huddle/id"><i className="fa fa-comments-o" aria-hidden="true"></i> Discussion</a></li>
-              <li className="nav-item"><a className="nav-link customNavBtn" href="/record/:id"><i className="fa fa-history" aria-hidden="true"></i> Highlights</a></li>
+              <li className="nav-item"><a className="nav-link customNavBtn" href="/records/:id"><i className="fa fa-history" aria-hidden="true"></i> Highlights</a></li>
             
     
               {/* <li className="nav-item customNavBtn"><i className="fa fa-home" aria-hidden="true"></i> Home</li>
