@@ -11,9 +11,10 @@ var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
 });
 
 var Schedule = sequelize.define("Schedule", {
-    name: Sequelize.STRING,
-    startTime: Sequelize.DATE,
-    endTime: Sequelize.DATE,
+    title: Sequelize.STRING,
+    start: Sequelize.STRING,
+    end: Sequelize.STRING,
+    location: Sequelize.STRING,
     details: Sequelize.STRING,
     teamID: Sequelize.INTEGER
 })
