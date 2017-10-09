@@ -39,11 +39,10 @@ class Records extends React.Component {
       <div>
         <Navbar />
 
-        <div className="row h-100">
-          <div className="col pt-2">
+       
             <div
-              className="container mainContainer d-flex align-items-center d-flex align-content-around flex-wrap"
-              id="customWrapper"
+              className="mh-100 container customContainer d-flex align-items-center d-flex align-content-around flex-wrap"
+              
             >
               {/* {this.state.posts.map(post =>  
              <div className="card card-inverse customBackground ">
@@ -58,12 +57,15 @@ class Records extends React.Component {
                 </div>
               </div>
               </div>)} */}
+              <a class="example-image-link "  href="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/042005-3d-transparent-glass-icon-sports-hobbies-people-volleyball.png"
+               data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
+              <img class="example-image customImg" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/042005-3d-transparent-glass-icon-sports-hobbies-people-volleyball.png" alt="" /></a>
 
-              <img
+              {/* <img
                 className="d-block img-fluid rounded mx-auto d-block customImg w-50 p-3 h-100 p-3"
                 src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/042005-3d-transparent-glass-icon-sports-hobbies-people-volleyball.png"
                 alt="Third slide"
-              />
+              /> */}
               <img
                 className="d-block img-fluid rounded mx-auto d-block customImg w-50 p-3 h-100 p-3"
                 src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-sports-hobbies/042005-3d-transparent-glass-icon-sports-hobbies-people-volleyball.png"
@@ -131,8 +133,6 @@ class Records extends React.Component {
                 alt="Third slide"
               />
             </div>
-          </div>
-        </div>
         <Footer />
       </div>
       

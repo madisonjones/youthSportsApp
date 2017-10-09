@@ -3,20 +3,21 @@ html,body{
   width:100vw;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  
 }
 
 #customWrapper {
   height: 82vh;
   width: auto;
+  overflow:auto
 }
 
-#customContainer {
-  width: 100%;
-  height: 100vh;
-  border: 2px solid black;
-
+.customContainer {
+  overflow: scroll;
+  
 }
+
+
 
 .customCard {
   margin-top: 2%;
