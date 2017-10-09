@@ -9,8 +9,8 @@ const events =
   },
   {
     'title': 'Conference',
-    'start': new Date(2015, 3, 11),
-    'end': new Date(2015, 3, 13),
+    'start': new Date(2017, 10, 15),
+    'end': new Date(2017, 10, 16),
     desc: 'Big conference for important people'
   },
   {

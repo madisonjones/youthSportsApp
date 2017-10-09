@@ -19,15 +19,6 @@ router.get("/discussion", function(req, res) {
     })
 })
 
-router.post("/discussion/post", function(req, res) {
-    Discussion.create({
-        title: "hi",
-        comment: "there",
-        createdAt: Date,
-        userID: 1
-    })
-})
-
 
 router.get("/announcements", function(req, res) {
     Announcements.findAll({})
@@ -35,6 +26,14 @@ router.get("/announcements", function(req, res) {
         res.json(dbPost)
     })
 })
+
+router.get("/schedule", function(req, res) {
+    Schedule.findAll({})
+    .then(function(dbPost) {
+        res.json(dbPost)
+    })
+})
+
 
 
 router.post("/livefeed/media/api", function(req, res) {
@@ -56,7 +55,7 @@ router.get("/livefeed/media/api", function(req, res) {
 
 
 //post from livefeed
-router.post('/livefeed/:id/:time', function(req, res) {
+router.post('/livefeed/media/api', function(req, res) {
     // Get sent data.
     var post = req.body;
     // Do a MySQL query.

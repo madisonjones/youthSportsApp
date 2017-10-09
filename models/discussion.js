@@ -10,14 +10,14 @@ var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
   }
 });
 
-var Discussion = sequelize.define("Discussion", {
+var Discussions = sequelize.define("Discussions", {
     title: Sequelize.STRING,
     comment: Sequelize.STRING,
     createdAt: Sequelize.DATE,
     userID: Sequelize.INTEGER
 })
 
-Discussion.sync({force: true})
+Discussions.sync({force: true})
 
 
-module.exports = Discussion
+module.exports = Discussions
