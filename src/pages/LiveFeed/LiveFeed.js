@@ -27,9 +27,7 @@ const LiveFeed = () => {
         <input type="submit" value="Submit" />
       </form> */}
 
-      <div className="row h-100">
 
-        <div className="col pt-2">
           <Counter
             value={store.getState()}
             onIncrement={() => store.dispatch({ type: "INCREMENT" })}
@@ -86,8 +84,6 @@ const LiveFeed = () => {
 
             <Messages />
           </div>
-        </div>
-      </div>
     </div>
   );
 };
