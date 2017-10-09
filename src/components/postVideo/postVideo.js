@@ -40,11 +40,11 @@ class PostImg extends React.Component {
     e.preventDefault();
     var self = this;
     // On submit of the form, send a POST request with the data to the server.
-    fetch("/livefeed/:id/:time", {
+    fetch("/livefeed/media/api", {
       method: "POST",
       posts: {
-        video: self.refs.img,
-        comment: self.refs.comment
+        img: self.refs.img,
+        comment: self.refs.comment,
       }
     })
       .then(function(response) {

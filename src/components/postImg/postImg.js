@@ -44,7 +44,6 @@ class PostImg extends React.Component {
       posts: {
         img: self.refs.img,
         comment: self.refs.comment,
-        score: self.refs.score
       }
     })
       .then(function(response) {

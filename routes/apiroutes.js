@@ -6,6 +6,7 @@ var Livefeed= require("../models/livefeed.js")
 var Members= require("../models/members.js")
 var Schedule= require("../models/schedule.js")
 var Teams= require("../models/teams.js")
+var Media = require("../models/media.js")
 
 
 
@@ -34,6 +35,24 @@ router.get("/announcements", function(req, res) {
         res.json(dbPost)
     })
 })
+
+
+router.post("/livefeed/media/api", function(req, res) {
+    Media.create({
+        link: req.body.img,
+        comment: req.body.comment
+        // score: req.score
+    })
+})
+
+
+router.get("/livefeed/media/api", function(req, res) {
+    Media.findAll({})
+    .then(function(mediaPost) {
+        res.json(mediaPost)
+    })
+})
+
 
 
 //post from livefeed
