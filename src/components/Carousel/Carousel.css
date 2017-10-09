@@ -1,4 +1,9 @@
 .customCarousel {
 	height: 50vh;
+	width: auto;
 	background: white;
+}
+
+.customImg {
+	
 }
