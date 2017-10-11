@@ -11,6 +11,7 @@ import counter from "../../reducers/index.js";
 import PostImg from "../../components/postImg";
 import PostMessage from "../../components/postMessage";
 import PostVideo from "../../components/postVideo";
+import LiveMessages from "../../components/LiveMessages";
 require("./LiveFeed.css");
 
 const store = createStore(counter);
@@ -81,8 +82,19 @@ const LiveFeed = () => {
               <PostVideo />
               
             </div>
+            <div className="container d-flex align-items-center " id="customWrapper">
+        <div id="customContainer">
+          <div className="card card-inverse customBackground">
 
-            <Messages />
+            <LiveMessages />
+
+            
+
+          </div>
+
+
+        </div>
+      </div>
           </div>
     </div>
   );

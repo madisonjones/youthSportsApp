@@ -36,7 +36,19 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('public', 'index.html'))
 })
 
-var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
+// var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+
+//   pool: {
+//     max: 10,
+//     min: 0,
+//     idle: 10000
+//   }
+// });
+
+
+var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
   host: 'localhost',
   dialect: 'mysql',
 
@@ -46,6 +58,8 @@ var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
     idle: 10000
   }
 });
+
+
 
 sequelize
   .authenticate()

@@ -10,12 +10,12 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
   }
 });
 
-var Media = sequelize.define("media", {
-    link: Sequelize.STRING,
-    comment: Sequelize.STRING
+var Score = sequelize.define("Score", {
+    teamOneScore: Sequelize.INTEGER,
+    teamTwoScore: Sequelize.INTEGER
 })
 
-Media.sync({force: true})
+Score.sync({force: true})
 
 
-module.exports = Media
+module.exports = Score

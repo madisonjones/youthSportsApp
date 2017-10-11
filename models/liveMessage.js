@@ -10,12 +10,12 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
   }
 });
 
-var Media = sequelize.define("media", {
-    link: Sequelize.STRING,
+var LiveMessage = sequelize.define("liveMessage", {
+    title: Sequelize.STRING,
     comment: Sequelize.STRING
 })
 
-Media.sync({force: true})
+LiveMessage.sync({force: true})
 
 
-module.exports = Media
+module.exports = LiveMessage

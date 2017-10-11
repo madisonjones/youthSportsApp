@@ -1,5 +1,6 @@
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
+var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
+  //password!23
   host: 'localhost',
   dialect: 'mysql',
 
