@@ -16,6 +16,11 @@ html,body{
     color: white;
 }
 
+.customContainer {
+    padding: 0px 30px 0px 30px;
+    overflow: hidden;
+}
+
 .scoreBackground {
     height: 30vh;
     background-image: url(https://ak6.picdn.net/shutterstock/videos/2082533/thumb/1.jpg);
@@ -38,4 +43,8 @@ html,body{
 
 .customPopup {
     margin-top: 250px;
+}
+
+.updateBtn {
+    margin-top: 20%;
 }

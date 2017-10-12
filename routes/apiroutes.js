@@ -9,6 +9,7 @@ var Teams = require("../models/teams.js");
 var Media = require("../models/media.js");
 var LiveMessage = require("../models/liveMessage");
 var Score = require("../models/score.js");
+var Game = require("../models/game.js");
 
 router.get("/discussion", function(req, res) {
   Discussion.findAll({}).then(function(dbPost) {
@@ -89,6 +90,20 @@ router.get("/livefeed/media/api", function(req, res) {
     Score.findAll({}).then(function(response) {
         res.json(response);
     })
+})
+
+router.post("/livefeed/final", function(req, res) {
+  Game.create({
+    teamOneScore: req.body.teamOneScore,
+    teamTwoScore: req.body.teamTwoScore
+  })
+})
+
+
+router.get("/livefeed/final", function(req, res) {
+  Game.findAll({}),then(function(response) {
+    res.json(response);
+  })
 })
 
 module.exports = router;

@@ -12,6 +12,7 @@ import PostImg from "../../components/postImg";
 import PostMessage from "../../components/postMessage";
 import PostVideo from "../../components/postVideo";
 import LiveMessages from "../../components/LiveMessages";
+import Footer from "../../components/Footer";
 require("./LiveFeed.css");
 
 const store = createStore(counter);
@@ -28,74 +29,60 @@ const LiveFeed = () => {
         <input type="submit" value="Submit" />
       </form> */}
 
+      <Counter
+        value={store.getState()}
+        onIncrement={() => store.dispatch({ type: "INCREMENT" })}
+        onDecrement={() => store.dispatch({ type: "DECREMENT" })}
+      />
+      <div className="container-fluid mainContainer">
+        <div
+          className="container-fluid btn-group d-flex justify-content-between"
+          role="group"
+          aria-label="Basic example"
+        >
+          <button
+            type="button"
+            className="btn btn-secondary w-100 p-3 customPostBtn"
+            data-toggle="modal"
+            data-target=".bd-example-modal-lgOne"
+          >
+            Post Image
+          </button>
 
-          <Counter
-            value={store.getState()}
-            onIncrement={() => store.dispatch({ type: "INCREMENT" })}
-            onDecrement={() => store.dispatch({ type: "DECREMENT" })}
-          />
-          <div className="container-fluid mainContainer">
-            <div
-              className="container-fluid btn-group d-flex justify-content-between"
-              role="group"
-              aria-label="Basic example"
-            >
-              <button
-                type="button"
-                className="btn btn-secondary w-100 p-3 customPostBtn"
-                data-toggle="modal"
-                data-target=".bd-example-modal-lgOne"
-              >
-                Post Image
-              </button>
-          
-             <PostImg />
+          <PostImg />
 
-            
+          <button
+            type="button"
+            className="btn btn-secondary w-100 p-3 customPostBtn"
+            data-toggle="modal"
+            data-target=".bd-example-modal-lgTwo"
+          >
+            Post Message
+          </button>
+          <PostMessage />
 
-
-
-
-              <button
-                type="button"
-                className="btn btn-secondary w-100 p-3 customPostBtn"
-                data-toggle="modal"
-                data-target=".bd-example-modal-lgTwo"
-              >
-                Post Message
-              </button>
-              <PostMessage />
-
-
-
-
-              
-
-              <button
-                type="button"
-                className="btn btn-secondary w-100 p-3 customPostBtn"
-                data-toggle="modal"
-                data-target=".bd-example-modal-lgThree"
-              >
-                Post Video
-              </button>
-              <PostVideo />
-              
-            </div>
-            <div className="container d-flex align-items-center " id="customWrapper">
-        <div id="customContainer">
-          <div className="card card-inverse customBackground">
-
-            <LiveMessages />
-
-            
-
-          </div>
-
-
+          <button
+            type="button"
+            className="btn btn-secondary w-100 p-3 customPostBtn"
+            data-toggle="modal"
+            data-target=".bd-example-modal-lgThree"
+          >
+            Post Video
+          </button>
+          <PostVideo />
         </div>
-      </div>
+        <div
+          className="container d-flex align-items-center "
+          id="customWrapper"
+        >
+          <div id="customContainer">
+            <div className="card card-inverse customBackground">
+              <LiveMessages />
+            </div>
           </div>
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };

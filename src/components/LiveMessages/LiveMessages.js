@@ -1,4 +1,5 @@
 import React from "react";
+require("./LiveMessages.css");
 
 class Messages extends React.Component {
   constructor(props) {
@@ -51,16 +52,66 @@ class Messages extends React.Component {
       createdAt: Date.now()
     });
 
+    this.state.imgs.push({
+      link:
+        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+      comment: "This is a placeholder image and a placeholder message",
+      createdAt: Date.now()
+    });
+
+    this.state.imgs.push({
+      link:
+        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+      comment: "This is a placeholder image and a placeholder message",
+      createdAt: Date.now()
+    });
+
+    this.state.imgs.push({
+      link:
+        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+      comment: "This is a placeholder image and a placeholder message",
+      createdAt: Date.now()
+    });
+
+    this.state.imgs.push({
+      link:
+        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+      comment: "This is a placeholder image and a placeholder message",
+      createdAt: Date.now()
+    });
+
     this.state.messages.push({
       title: "The Title",
       comment: "The Message",
       createdAt: Date.now()
     });
+
+    this.state.messages.push({
+      title: "The other Title",
+      comment: "The other Message",
+      createdAt: Date.now()
+    });
+
+    this.state.messages.push({
+      title: "The other Title",
+      comment: "The other Message",
+      createdAt: Date.now()
+    });
+
+    this.state.messages.push({
+      title: "The other Title",
+      comment: "The other Message",
+      createdAt: Date.now()
+    });
     return (
       // const Messages = props => {
 
-      <div>
+      // <div className="d-flex align-items-center d-flex align-content-around flex-wrap">
+      <div class="container">
+      <div class="row">
+        {/* <div className="col-12"> */}
         {this.state.videos.map(post => (
+          <div className="col-4">
           <div className="card-block ">
             <div className="card customCard">
               <div className="card-block">
@@ -69,16 +120,18 @@ class Messages extends React.Component {
                   alt="Livefeed image"
                   src={post.link}
                 />
-                <h6 className="card-subtitle mb-2 text-muted">
+                <h6 className="card-subtitle mb-2 text-muted" id="customText">
                   {post.comment}
                 </h6>
                 <p className="card-text text-info">{post.createdAt}</p>
+              </div>
               </div>
             </div>
           </div>
         ))}
 
         {this.state.imgs.map(post => (
+          <div className="col-4">
           <div className="card-block ">
             <div className="card customCard">
               <div className="card-block">
@@ -87,28 +140,33 @@ class Messages extends React.Component {
                   alt="Livefeed image"
                   src={post.link}
                 />
-                <h6 className="card-subtitle mb-2 text-muted">
+                <h6 className="card-subtitle mb-2 text-muted" id="customText">
                   {post.comment}
                 </h6>
                 <p className="card-text text-info">{post.createdAt}</p>
+              </div>
               </div>
             </div>
           </div>
         ))}
 
         {this.state.messages.map(post => (
+          <div className="col-4">
           <div className="card-block ">
             <div className="card customCard">
               <div className="card-block">
-                <h1 className="card-title">{post.title}</h1>
-                <h6 className="card-subtitle mb-2 text-muted">
+                <h1 className="card-title text-primary" id="customTitle">{post.title}</h1>
+                <h6 className="card-subtitle mb-2 text-muted" id="customText">
                   {post.comment}
                 </h6>
                 <p className="card-text text-info">{post.createdAt}</p>
               </div>
             </div>
+            </div>
           </div>
         ))}
+        {/* </div> */}
+        </div>
       </div>
     );
   }

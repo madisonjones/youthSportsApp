@@ -5,7 +5,8 @@ class Counter extends Component {
     super(props);
     this.state = {
       teamOneScore: 0,
-      teamTwoScore: 0
+      teamTwoScore: 0,
+      half: 1
     };
   }
 
@@ -60,12 +61,65 @@ class Counter extends Component {
     }
   };
 
+
+  halfParser = (state) => {
+    switch(this.state.half) {
+      case 1: this.state.half = "1st";
+      break;
+
+      case 2: this.state.half = "2nd";
+      break;
+
+      case 3: this.state.half = "3rd";
+      break;
+
+      case 4: this.state.half = "4th";
+      break;
+
+      case 5: this.state.half = "5th";
+
+      case 6: this.state.half = "6th";
+      break;
+
+      case 7: this.state.half = "7th";
+      break;
+
+      case 8: this.state.half = "8th";
+      break;
+
+      case 9: this.state.half = "9th";
+      break;
+
+      default: this.state.half = "10th";
+      break;
+  }
+}
+
+  onIncrementHalf = (e) => {
+    this.setState({
+      half: this.state.half += 1
+    });
+    this.halfParser(this.state.half);
+    }
+  
+
+  onDecrementHalf = (e) => {
+    if (this.state.half >= 1) {
+      this.setState({
+        half: (this.state.half -= 1)
+      });
+      this.halfParser(this.state.half);
+    } else {
+      this.state.half === 1;
+    }
+  }
+
   render() {
     return (
       <div className="d-flex justify-content-between scoreContainer scoreBackground h-100 p-3">
         <div>
           <div className="d-flex flex-column">
-            <h1 className="p-2 text-center customScore">Team 1</h1>
+            <h1 className="p-2 text-center customScore">Home</h1>
             <h1 className="p-2 text-center customScore">
               {this.state.teamOneScore}
             </h1>{" "}
@@ -77,13 +131,15 @@ class Counter extends Component {
         <div className="d-flex align-items-center">
           <div className="d-flex justify-content-center flex-column">
             <h1 className="customScore p-2">1st</h1>
-            <input type="submit" value="Update" className="p-2 text-center" onClick={this.handleSubmit} />
+            <button onClick={this.onIncrementHalf}>+</button>{" "}
+            <button onClick={this.onDecrementHalf}>-</button>
+            <input type="submit" value="Update" className="p-2 text-center btn btn-success updateBtn" onClick={this.handleSubmit} />
           </div>
         </div>
 
         <div>
           <div className="d-flex flex-column">
-            <h1 className="p-2 text-center customScore">Team 1</h1>
+            <h1 className="p-2 text-center customScore">Away</h1>
             <h1 className="p-2 text-center customScore">
               {this.state.teamTwoScore}
             </h1>{" "}
