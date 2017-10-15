@@ -94,8 +94,9 @@ router.get("/livefeed/media/api", function(req, res) {
 
 router.post("/livefeed/final", function(req, res) {
   Game.create({
-    teamOneScore: req.body.teamOneScore,
-    teamTwoScore: req.body.teamTwoScore
+    finalHomeScore: req.body.teamOneScore,
+    finalHomeScore: req.body.teamTwoScore,
+    finalHalf: req.body.halfLetter
   })
 })
 

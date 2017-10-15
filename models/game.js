@@ -13,7 +13,8 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
 
 var Game = sequelize.define("Game", {
     finalHomeScore: Sequelize.INTEGER,
-    finalAwayScore: Sequelize.INTEGER
+    finalAwayScore: Sequelize.INTEGER,
+    finalHalf: Sequelize.STRING
 })
 
 Game.sync({force: true})

@@ -6,7 +6,8 @@ class Counter extends Component {
     this.state = {
       teamOneScore: 0,
       teamTwoScore: 0,
-      half: 1
+      half: 1,
+      halfLetter: "1st"
     };
   }
 
@@ -18,7 +19,8 @@ class Counter extends Component {
       method: "POST",
       body: {
         teamOneScore: self.state.teamOneScore,
-        teamTwoScore: self.state.teamTwoScore
+        teamTwoScore: self.state.teamTwoScore,
+        halfLetter: self.state.halfLetter
       }
     })
       .then(function(response) {
@@ -64,33 +66,40 @@ class Counter extends Component {
 
   halfParser = (state) => {
     switch(this.state.half) {
-      case 1: this.state.half = "1st";
+      case 1: this.state.halfLetter = "1st";
       break;
 
-      case 2: this.state.half = "2nd";
+      case 2: this.state.halfLetter = "2nd";
       break;
 
-      case 3: this.state.half = "3rd";
+      case 3: this.state.halfLetter = "3rd";
       break;
 
-      case 4: this.state.half = "4th";
+      case 4: this.state.halfLetter = "4th";
       break;
 
-      case 5: this.state.half = "5th";
-
-      case 6: this.state.half = "6th";
+      case 5: this.state.halfLetter = "5th";
       break;
 
-      case 7: this.state.half = "7th";
+      case 6: this.state.halfLetter = "6th";
       break;
 
-      case 8: this.state.half = "8th";
+      case 7: this.state.halfLetter = "7th";
       break;
 
-      case 9: this.state.half = "9th";
+      case 8: this.state.halfLetter = "8th";
       break;
 
-      default: this.state.half = "10th";
+      case 9: this.state.halfLetter = "9th";
+      break;
+
+      case 10: this.state.halfLetter = "10th";
+      break;
+
+      case 11: this.state.halfLetter = "11th";
+      break;
+
+      default: this.state.halfLetter = "12th";
       break;
   }
 }
@@ -130,7 +139,7 @@ class Counter extends Component {
 
         <div className="d-flex align-items-center">
           <div className="d-flex justify-content-center flex-column">
-            <h1 className="customScore p-2">1st</h1>
+            <h1 className="customScore p-2">{this.state.halfLetter}</h1>
             <button onClick={this.onIncrementHalf}>+</button>{" "}
             <button onClick={this.onDecrementHalf}>-</button>
             <input type="submit" value="Update" className="p-2 text-center btn btn-success updateBtn" onClick={this.handleSubmit} />

@@ -46,14 +46,19 @@ class PostImg extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    var self = this;
+    let self = this;
+    let body = {
+      link: self.refs.link,
+      comment: self.refs.comment
+    }
     // On submit of the form, send a POST request with the data to the server.
     fetch("http://localhost:3333/api/live/videos", {
       method: "POST",
-      body: {
-        link: self.refs.link,
-        comment: self.refs.comment
-      }
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
     })
       .then(function(response) {
         return response.json();

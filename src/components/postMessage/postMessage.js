@@ -52,7 +52,11 @@ class PostMessage extends React.Component {
     console.log(body);
     fetch("http://localhost:3333/api/live/messages", {
       method: "POST",
-      body: body
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
     })
       .then(function(response) {
         return response.json();
@@ -79,7 +83,6 @@ class PostMessage extends React.Component {
               <div className="form-group">
                 <h1 className="text-center">Update Game</h1>
                 <Increment
-                  ref="score"
                   value={store.getState()}
                   onIncrement={() => store.dispatch({ type: "INCREMENT" })}
                   onDecrement={() => store.dispatch({ type: "DECREMENT" })}

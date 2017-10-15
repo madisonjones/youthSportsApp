@@ -10,10 +10,13 @@ class PostImg extends React.Component {
     super();
     this.state = {
       posts: [],
-      comment: ""
+      link: "",
+      comment: "",
+      file: "", 
+      imagePreviewUrl: ""
     };
     this.onSubmit = this.handleSubmit.bind(this);
-    this.state = { file: "", imagePreviewUrl: "" };
+    // this.state = { file: "", imagePreviewUrl: "" };
   }
 
   _handleImageChange = e => {
@@ -44,14 +47,19 @@ class PostImg extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    var self = this;
+
+    let body = {
+      link: this.state.file,
+      comment: this.state.comment
+    }
     // On submit of the form, send a POST request with the data to the server.
     fetch("http://localhost:3333/api/live/images", {
       method: "POST",
-      body: {
-        link: self.refs.link,
-        comment: self.refs.comment
-      }
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
     })
       // .then(function(response) {
       //   return response.json();
@@ -98,8 +106,9 @@ class PostImg extends React.Component {
                   className="form-control-file"
                   id="exampleInputFile"
                   aria-describedby="fileHelp"
-                  ref="img"
-                  onChange={e => this._handleImageChange}
+                  name="link"
+                  value={this.state.link}
+                  onChange={this._handleImageChange}
                 />
                 <small id="fileHelp" className="form-text text-muted">
                   Upload your favorite image, leave a comment then press submit

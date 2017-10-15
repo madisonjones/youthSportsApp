@@ -12,7 +12,7 @@ class Messages extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3333/api/live/videos") // or whatever URL you want
+    fetch("http://localhost:3333/api/live/videos") 
       .then(response => response.json())
       .then(videos =>
         this.setState({
@@ -38,71 +38,71 @@ class Messages extends React.Component {
   }
 
   render() {
-    this.state.videos.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.videos.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.imgs.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.imgs.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.imgs.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.imgs.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.imgs.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.imgs.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.imgs.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.imgs.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.imgs.push({
-      link:
-        "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
-      comment: "This is a placeholder image and a placeholder message",
-      createdAt: Date.now()
-    });
+    // this.state.imgs.push({
+    //   link:
+    //     "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png",
+    //   comment: "This is a placeholder image and a placeholder message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.messages.push({
-      title: "The Title",
-      comment: "The Message",
-      createdAt: Date.now()
-    });
+    // this.state.messages.push({
+    //   title: "The Title",
+    //   comment: "The Message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.messages.push({
-      title: "The other Title",
-      comment: "The other Message",
-      createdAt: Date.now()
-    });
+    // this.state.messages.push({
+    //   title: "The other Title",
+    //   comment: "The other Message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.messages.push({
-      title: "The other Title",
-      comment: "The other Message",
-      createdAt: Date.now()
-    });
+    // this.state.messages.push({
+    //   title: "The other Title",
+    //   comment: "The other Message",
+    //   createdAt: Date.now()
+    // });
 
-    this.state.messages.push({
-      title: "The other Title",
-      comment: "The other Message",
-      createdAt: Date.now()
-    });
+    // this.state.messages.push({
+    //   title: "The other Title",
+    //   comment: "The other Message",
+    //   createdAt: Date.now()
+    // });
     return (
       // const Messages = props => {
 
