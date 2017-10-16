@@ -12,21 +12,22 @@ class Messages extends React.Component {
   }
 
   componentDidMount() {
-    // fetch("http://localhost:3333/api/live/videos") 
-    //   .then(response => response.json())
-    //   .then(videos =>
-    //     this.setState({
-    //       videos: videos
-    //     })
-    //   );
+    fetch("http://localhost:3333/api/live/videos") 
+      .then(response => response.json())
+      .then(videos =>
+        this.setState({
+          videos: videos
+        })
+      );
 
-    // fetch("http://localhost:3333/api/live/images")
-    //   .then(response => response.json())
-    //   .then(imgs =>
-    //     this.setState({
-    //       imgs: imgs
-    //     })
-    //   );
+
+      fetch("http://localhost:3333/api/live/images")
+      .then(response => response.json())
+      .then(imgs =>
+        this.setState({
+          imgs: imgs
+        })
+      );
 
     fetch("http://localhost:3333/api/live/messages")
       .then(response => response.json())
@@ -118,7 +119,7 @@ class Messages extends React.Component {
                 <img
                   className="card-title rounded mx-auto d-block"
                   alt="Livefeed image"
-                  src={post.link}
+                  src={post.link.data}
                 />
                 <h6 className="card-subtitle mb-2 text-muted" id="customText">
                   {post.comment}

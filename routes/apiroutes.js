@@ -6,7 +6,7 @@ var Livefeed = require("../models/livefeed.js");
 var Members = require("../models/members.js");
 var Schedule = require("../models/schedule.js");
 var Teams = require("../models/teams.js");
-var Media = require("../models/media");
+var Media = require("../models/media.js");
 
 var LiveMessage = require("../models/liveMessage");
 var Score = require("../models/score.js");
@@ -15,10 +15,18 @@ const axios = require("axios");
 const multer = require("multer");
 
 var fs = require("fs");
+var url = require('url');
 
 const upload = multer({ dest: "../files" });
 
 var type = upload.single("recfile");
+
+router.post("/discussion", function(req, res) {
+  Discussion.create({
+    title: req.body.title,
+    comment: req.body.comment
+  })
+})
 
 router.get("/discussion", function(req, res) {
   Discussion.findAll({}).then(function(dbPost) {
@@ -31,6 +39,13 @@ router.get("/announcements", function(req, res) {
     res.json(dbPost);
   });
 });
+
+router.post("/announcements", function(req, res) {
+  Announcements.create({
+    title: req.body.title,
+    comment: req.body.comment
+  })
+})
 
 router.get("/schedule", function(req, res) {
   Schedule.findAll({}).then(function(dbPost) {
@@ -59,21 +74,23 @@ router.get("/live/messages", function(req, res) {
 });
 
 router.post("/live/images", upload.single("avatar"), function(req, res) {
-  console.log(req.body);
-  console.log(req.file);
+  // console.log("Body: " + req.body);
+  console.log("File: " + req.file.path);
+  
 
   req.body.type = true;
   let files = {
-    link: fs.readFileSync(req.body.link),
+    link: fs.readFileSync(req.file.path),
     linkType: req.file.mimetype
   };
+  
 
   Media.create({
     link: files,
     comment: req.body.comment
     // score: req.score
   }).then(post => {
-    console.log(post);
+    console.log("------------------------------------------Response : " + post);
   });
 });
 

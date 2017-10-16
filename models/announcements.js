@@ -13,8 +13,11 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
 var Announcements = sequelize.define("Announcements", {
     title: Sequelize.STRING,
     comment: Sequelize.STRING,
-    createdAt: Sequelize.DATE,
-    teamID: Sequelize.STRING
+    createdAt: { type: Sequelize.DATEONLY, defaultValue: Sequelize.NOW },
+    // teamID: Sequelize.STRING
+}, {
+  timestamps: false,
+  underscored: true
 })
 
 

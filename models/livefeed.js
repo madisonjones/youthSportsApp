@@ -14,10 +14,15 @@ var Livefeed = sequelize.define("Livefeed", {
     userID: Sequelize.INTEGER,
     title: Sequelize.STRING,
     comment: Sequelize.STRING,
-    createdAt: Sequelize.DATE,
     ourScore: Sequelize.INTEGER,
-    theirScore: Sequelize.INTEGER
-})
+    theirScore: Sequelize.INTEGER,
+    createdAt: { type: Sequelize.DATEONLY, defaultValue: Sequelize.NOW },
+    // teamID: Sequelize.STRING
+}, {
+  timestamps: false,
+  underscored: true
+}
+)
 
 Livefeed.sync({force: true})
 

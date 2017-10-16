@@ -10,7 +10,7 @@ require("./Huddle.css");
 const Huddle = props => {
     return(
         <div>
-        <Navbar />
+       
         <div className="container-fluid mainContainer">
         <div className="row h-100">
           <SideNav />

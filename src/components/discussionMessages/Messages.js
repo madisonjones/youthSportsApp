@@ -1,12 +1,16 @@
 import React from "react";
+import PostMessage from "../postMessage"
 require("./Messages.css");
 
 class DiscussionMessages extends React.Component {
    constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
+      title: "",
+      comment: ""
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   componentDidMount() {
@@ -17,12 +21,106 @@ class DiscussionMessages extends React.Component {
       }));
   }
 
+
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+
+
+  handleSubmit = e => {
+    console.log("One log");
+    e.preventDefault();
+    var self = this;
+    // On submit of the form, send a POST request with the data to the server.
+    let body = {
+      title: this.state.title,
+      comment: this.state.comment
+    };
+    console.log(body);
+    fetch("http://localhost:3333/api/discussion", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(body) {
+        console.log(body);
+      });
+  };
+
+
+
   render() {
     return (
 // const Messages = props => {
         <div className="container d-flex align-items-center " id="customWrapper">
-        <div id="customContainer">
+        <div id="customContainer"><button
+            type="button"
+            className="btn btn-secondary w-100 p-3 customPostBtn"
+            data-toggle="modal"
+            data-target=".bd-example-modal-lgTwo"
+          >
+            Post Message
+          </button>
+          {/* <PostMessage /> */}
+          <div
+        className="modal fade bd-example-modal-lgTwo"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-lg">
+          <div className="modal-content customPopup">
+            <form>
+              <div className="form-group">
+                <label for="exampleTextarea">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  onChange={this.handleInputChange}
+                  value={this.state.title}
+                />
+              </div>
+              <div className="form-group">
+                <label for="exampleTextarea">Message</label>
+                <textarea
+                  className="form-control"
+                  id="exampleTextarea"
+                  rows="3"
+                  name="comment"
+                  onChange={this.handleInputChange}
+                  value={this.state.comment}
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg btn-block"
+                onClick={this.handleSubmit}
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
           <div className="card card-inverse customBackground">
+          
 
           {this.state.posts.map(post =>  
             <div className="card-block ">

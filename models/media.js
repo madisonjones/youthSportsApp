@@ -9,14 +9,14 @@ let sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
     idle: 10000
   }
 });
-module.exports = function (sequelize, DataTypes) {
+// module.exports = function (sequelize, DataTypes) {
   let Media = sequelize.define("media", {
     link: {
-      type: DataTypes.BLOB('medium'),
+      type: Sequelize.BLOB,
       len: [1]
     },
     linkType: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       validate: {
         len: [1]
       }
@@ -26,8 +26,8 @@ module.exports = function (sequelize, DataTypes) {
 
 Media.sync({force: true})
 
-return Media;
-};
+// return Media;
+// };
 
-
+module.exports = Media;
 

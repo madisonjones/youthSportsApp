@@ -14,8 +14,11 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
 var Discussions = sequelize.define("Discussions", {
     title: Sequelize.STRING,
     comment: Sequelize.STRING,
-    createdAt: Sequelize.DATE,
-    userID: Sequelize.INTEGER
+    createdAt: { type: Sequelize.DATEONLY, defaultValue: Sequelize.NOW },
+    // teamID: Sequelize.STRING
+}, {
+  timestamps: false,
+  underscored: true
 })
 
 Discussions.sync({force: true})

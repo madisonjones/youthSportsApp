@@ -132,7 +132,7 @@ class PostImg extends React.Component {
     if (imagePreviewUrl) {
       $imagePreview = (
         <img
-          className="rounded mx-auto d-block mw-100 mh-100"
+          className="rounded mx-auto d-block mw-75 mh-75"
           src={imagePreviewUrl}
         />
       );
