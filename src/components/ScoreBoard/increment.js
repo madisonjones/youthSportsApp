@@ -32,12 +32,14 @@ class Counter extends Component {
   }
 
   onIncrementTeamOne = e => {
+    e.preventDefault();
     this.setState({
       teamOneScore: (this.state.teamOneScore += 1)
     });
   };
 
   onDecrementTeamOne = e => {
+    e.preventDefault();
     if (this.state.teamOneScore >= 1) {
       this.setState({
         teamOneScore: (this.state.teamOneScore -= 1)
@@ -48,12 +50,14 @@ class Counter extends Component {
   };
 
   onIncrementTeamTwo = e => {
+    e.preventDefault();
     this.setState({
       teamTwoScore: (this.state.teamTwoScore += 1)
     });
   };
 
   onDecrementTeamTwo = e => {
+    e.preventDefault();
     if (this.state.teamTwoScore >= 1) {
       this.setState({
         teamTwoScore: (this.state.teamTwoScore -= 1)
@@ -105,6 +109,7 @@ class Counter extends Component {
 }
 
   onIncrementHalf = (e) => {
+    e.preventDefault();
     this.setState({
       half: this.state.half += 1
     });
@@ -113,6 +118,7 @@ class Counter extends Component {
   
 
   onDecrementHalf = (e) => {
+    e.preventDefault();
     if (this.state.half >= 1) {
       this.setState({
         half: (this.state.half -= 1)

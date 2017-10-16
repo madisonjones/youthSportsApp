@@ -36,16 +36,50 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('public', 'index.html'))
 })
 
-// var sequelize = new Sequelize('youthsports', 'root', 'password!23', {
-//   host: 'localhost',
-//   dialect: 'mysql',
 
-//   pool: {
-//     max: 10,
-//     min: 0,
-//     idle: 10000
-//   }
+
+
+
+
+// /**
+//  ... express.js boilerplate
+//  routes, middlewares, helpers, loggers, etc
+// **/
+
+// // configuring Multer to use files directory for storing files
+// // this is important because later we'll need to access file path
+// const storage = multer.diskStorage({
+//   destination: './files',
+//   filename(req, file, cb) {
+//     cb(null, `${new Date()}-${file.originalname}`);
+//   },
 // });
+
+// const upload = multer({ storage });
+
+// // express route where we receive files from the client
+// // passing multer middleware
+// app.post('/files', upload.single('file'), (req, res) => {
+//  const file = req.file; // file passed from client
+//  const meta = req.body; // all other values passed from the client, like name, etc..
+ 
+//  // send the data to our REST API
+//  axios({
+//     url: `http://localhost:3333/api/live/images`,
+//     method: 'post',
+//     data: {
+//       file,
+//       name: meta.name,      
+//     },
+//   })
+//    .then(response => res.status(200).json(response.data.data))
+//    .catch((error) => res.status(500).json(error.response.data));
+// });
+
+
+
+
+
 
 
 var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {

@@ -1,5 +1,5 @@
-var Sequelize = require("sequelize");
-var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
+let Sequelize = require("sequelize");
+let sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
   host: 'localhost',
   dialect: 'mysql',
 
@@ -9,13 +9,25 @@ var sequelize = new Sequelize('youthsports', 'root', 'rockeT04', {
     idle: 10000
   }
 });
-
-var Media = sequelize.define("media", {
-    link: Sequelize.STRING,
+module.exports = function (sequelize, DataTypes) {
+  let Media = sequelize.define("media", {
+    link: {
+      type: DataTypes.BLOB('medium'),
+      len: [1]
+    },
+    linkType: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1]
+      }
+    },
     comment: Sequelize.STRING
 })
 
 Media.sync({force: true})
 
+return Media;
+};
 
-module.exports = Media
+
+

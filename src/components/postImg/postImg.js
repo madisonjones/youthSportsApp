@@ -2,6 +2,8 @@ import React from "react";
 import Increment from "../ScoreBoard/increment.js";
 import { createStore } from "redux";
 import counter from "../../reducers/index.js";
+import axios from "axios";
+import multer from 'multer';
 
 const store = createStore(counter);
 
@@ -46,8 +48,9 @@ class PostImg extends React.Component {
   };
 
   handleSubmit = e => {
+    console.log(this.state.file)
     e.preventDefault();
-
+    
     let body = {
       link: this.state.file,
       comment: this.state.comment
@@ -61,13 +64,67 @@ class PostImg extends React.Component {
       },
       body: JSON.stringify(body)
     })
-      // .then(function(response) {
-      //   return response.json();
-      // })
+      .then(function(response) {
+        return response.json();
+      })
       .then(function(body) {
         console.log(body);
       });
   };
+
+
+
+
+
+
+
+
+  
+
+// // Redux action
+// uploadSuccess = ({ data }) => {
+//   return {
+//     type: 'UPLOAD_DOCUMENT_SUCCESS',
+//     data,
+//   };
+// }
+// uploadFail = (error) => {
+//   return {
+//     type: 'UPLOAD_DOCUMENT_FAIL',
+//     error,
+//   };
+// }
+// uploadDocumentRequest = ({ file, name }) => {  
+//   let data = new FormData();
+//   data.append('file', document);
+//   data.append('name', name);
+
+//   return (dispatch) => {
+//     axios.post('/files', data)
+//       .then(response => dispatch(this.uploadSuccess(response))
+//       .catch(error => dispatch(this.uploadFail(error))));
+//   };
+// }
+
+// /*
+//  ... A lot of Redux / React boilerplate happens here 
+//  like mapDispatchToProps and mapStateToProps and @connect ...
+// */
+
+// // Component method
+// handleFileUpload = ({ files }) => {
+//   const file = files[0];
+//   this.props.actions.uploadRequest({
+//      file,
+//      name: 'Live Media'
+//   })
+// }
+
+
+
+
+
+
 
   render() {
     let { imagePreviewUrl } = this.state;

@@ -12,10 +12,11 @@ class PostImg extends React.Component {
     super();
     this.state = {
       posts: [],
-      comment: ""
+      comment: "",
+      file: "", 
+      iframePreviewUrl: ""
     };
     this.onSubmit = this.handleSubmit.bind(this);
-    this.state = { file: "", iframePreviewUrl: "" };
   }
 
   _handleIframeChange = e => {
@@ -46,10 +47,10 @@ class PostImg extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    let self = this;
+
     let body = {
-      link: self.refs.link,
-      comment: self.refs.comment
+      link: this.state.file,
+      comment: this.state.comment
     }
     // On submit of the form, send a POST request with the data to the server.
     fetch("http://localhost:3333/api/live/videos", {
@@ -108,8 +109,9 @@ class PostImg extends React.Component {
                   className="form-control-file"
                   id="exampleInputFile"
                   aria-describedby="fileHelp"
-                  ref="video"
-                  onChange={e => this._handleIframeChange}
+                  name="link"
+                  value={this.state.link}
+                  onChange={this._handleIframeChange}
                 />
                 <small id="fileHelp" className="form-text text-muted">
                   Upload your favorite video, leave a comment then press submit

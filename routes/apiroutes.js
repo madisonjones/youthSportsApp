@@ -6,10 +6,19 @@ var Livefeed = require("../models/livefeed.js");
 var Members = require("../models/members.js");
 var Schedule = require("../models/schedule.js");
 var Teams = require("../models/teams.js");
-var Media = require("../models/media.js");
+var Media = require("../models/media");
+
 var LiveMessage = require("../models/liveMessage");
 var Score = require("../models/score.js");
 var Game = require("../models/game.js");
+const axios = require("axios");
+const multer = require("multer");
+
+var fs = require("fs");
+
+const upload = multer({ dest: "../files" });
+
+var type = upload.single("recfile");
 
 router.get("/discussion", function(req, res) {
   Discussion.findAll({}).then(function(dbPost) {
@@ -49,11 +58,22 @@ router.get("/live/messages", function(req, res) {
   });
 });
 
-router.post("/live/images", function(req, res) {
+router.post("/live/images", upload.single("avatar"), function(req, res) {
+  console.log(req.body);
+  console.log(req.file);
+
+  req.body.type = true;
+  let files = {
+    link: fs.readFileSync(req.body.link),
+    linkType: req.file.mimetype
+  };
+
   Media.create({
-    link: req.body.link,
+    link: files,
     comment: req.body.comment
     // score: req.score
+  }).then(post => {
+    console.log(post);
   });
 });
 
@@ -63,11 +83,22 @@ router.get("/live/images", function(req, res) {
   });
 });
 
-router.post("/live/videos", function(req, res) {
+router.post("/live/videos", upload.single("avatar"), function(req, res) {
+  console.log(req.body);
+  console.log(req.file);
+
+  req.body.type = true;
+  let files = {
+    link: fs.readFileSync(req.file.path),
+    linkType: req.file.mimetype
+  };
+
   Media.create({
-    link: req.body.link,
+    link: files,
     comment: req.body.comment
     // score: req.score
+  }).then(post => {
+    console.log(post);
   });
 });
 
@@ -77,34 +108,34 @@ router.get("/live/videos", function(req, res) {
   });
 });
 
-
 router.post("/livefeed/media/api", function(req, res) {
-    console.log("POST MESSAGE FOR req: " + req.body)
-    Score.create({
-        teamOneScore: req.body.teamOneScore,
-        teamTwoScore: req.body.teamTwoScore
-    })
-})
+  console.log("POST MESSAGE FOR req: " + req.body);
+  Score.create({
+    teamOneScore: req.body.teamOneScore,
+    teamTwoScore: req.body.teamTwoScore,
+    halfLetter: req.body.halfLetter
+  });
+});
 
 router.get("/livefeed/media/api", function(req, res) {
-    Score.findAll({}).then(function(response) {
-        res.json(response);
-    })
-})
+  Score.findAll({}).then(function(response) {
+    res.json(response);
+  });
+});
 
 router.post("/livefeed/final", function(req, res) {
   Game.create({
     finalHomeScore: req.body.teamOneScore,
     finalHomeScore: req.body.teamTwoScore,
     finalHalf: req.body.halfLetter
-  })
-})
-
+  });
+});
 
 router.get("/livefeed/final", function(req, res) {
-  Game.findAll({}),then(function(response) {
-    res.json(response);
-  })
-})
+  Game.findAll({}),
+    then(function(response) {
+      res.json(response);
+    });
+});
 
 module.exports = router;
