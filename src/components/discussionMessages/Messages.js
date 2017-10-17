@@ -1,9 +1,10 @@
 import React from "react";
-import PostMessage from "../postMessage"
+import PostMessage from "../postMessage";
+import Carousel from "../Carousel"
 require("./Messages.css");
 
 class DiscussionMessages extends React.Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       posts: [],
@@ -14,14 +15,14 @@ class DiscussionMessages extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3333/api/discussion') // or whatever URL you want
-      .then((response) => response.json())
-      .then((posts) => this.setState({
-        posts: posts,
-      }));
+    fetch("http://localhost:3333/api/discussion") // or whatever URL you want
+      .then(response => response.json())
+      .then(posts =>
+        this.setState({
+          posts: posts
+        })
+      );
   }
-
-
 
   handleInputChange(event) {
     const target = event.target;
@@ -32,8 +33,6 @@ class DiscussionMessages extends React.Component {
       [name]: value
     });
   }
-
-
 
   handleSubmit = e => {
     console.log("One log");
@@ -61,13 +60,12 @@ class DiscussionMessages extends React.Component {
       });
   };
 
-
-
   render() {
     return (
-// const Messages = props => {
-        <div className="container d-flex align-items-center " id="customWrapper">
-        <div id="customContainer"><button
+      // const Messages = props => {
+      <div className="container d-flex align-items-center " id="customWrapper">
+        <div id="customContainer">
+          <button
             type="button"
             className="btn btn-secondary w-100 p-3 customPostBtn"
             data-toggle="modal"
@@ -77,64 +75,67 @@ class DiscussionMessages extends React.Component {
           </button>
           {/* <PostMessage /> */}
           <div
-        className="modal fade bd-example-modal-lgTwo"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myLargeModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-lg">
-          <div className="modal-content customPopup">
-            <form>
-              <div className="form-group">
-                <label for="exampleTextarea">Title</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="title"
-                  onChange={this.handleInputChange}
-                  value={this.state.title}
-                />
-              </div>
-              <div className="form-group">
-                <label for="exampleTextarea">Message</label>
-                <textarea
-                  className="form-control"
-                  id="exampleTextarea"
-                  rows="3"
-                  name="comment"
-                  onChange={this.handleInputChange}
-                  value={this.state.comment}
-                />
-              </div>
+            className="modal fade bd-example-modal-lgTwo"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myLargeModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-lg">
+              <div className="modal-content customPopup">
+                <form>
+                  <div className="form-group">
+                    <Carousel />
+                  </div>
+                  <div className="form-group">
+                    <label for="exampleTextarea">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="title"
+                      onChange={this.handleInputChange}
+                      value={this.state.title}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="exampleTextarea">Message</label>
+                    <textarea
+                      className="form-control"
+                      id="exampleTextarea"
+                      rows="3"
+                      name="comment"
+                      onChange={this.handleInputChange}
+                      value={this.state.comment}
+                    />
+                  </div>
 
-              <button
-                type="submit"
-                class="btn btn-primary btn-lg btn-block"
-                onClick={this.handleSubmit}
-              >
-                Submit
-              </button>
-            </form>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg btn-block"
+                    onClick={this.handleSubmit}
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           <div className="card card-inverse customBackground">
-          
-
-          {this.state.posts.map(post =>  
-            <div className="card-block ">
-              <div className="card customCard">
-                <div className="card-block">
-                  <h2 className="card-title text-info">{post.title}</h2>
-                   <h6 className="card-subtitle mb-2 text-muted">{post.comment}</h6>
-                  <p className="card-text text-info">{post.createdAt}</p>
+            {this.state.posts.map(post => (
+              <div className="card-block ">
+                <div className="card customCard">
+                  <div className="card-block">
+                    <h2 className="card-title text-info">{post.title}</h2>
+                    <h6 className="card-subtitle mb-2 text-muted">
+                      {post.comment}
+                    </h6>
+                    <p className="card-text text-info">{post.createdAt}</p>
+                  </div>
                 </div>
               </div>
-            </div>)}
+            ))}
 
-
-              {/* <div className="card customCard">
+            {/* <div className="card customCard">
                 <div className="card-block">
                   <h4 className="card-title text-info">{props.title}</h4>
                   <h6 className="card-subtitle mb-2 text-muted">{props.time}</h6>
@@ -177,15 +178,11 @@ class DiscussionMessages extends React.Component {
                   <p className="card-text text-info">{props.message}</p>
                 </div>
               </div> */}
-
-
-
           </div>
-
-
         </div>
       </div>
-    )
-}}
+    );
+  }
+}
 
 export default DiscussionMessages;

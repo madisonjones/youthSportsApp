@@ -96,7 +96,8 @@ router.post("/live/images", upload.single("avatar"), function(req, res) {
 
 router.get("/live/images", function(req, res) {
   Media.findAll({}).then(function(mediaPost) {
-    res.json(mediaPost);
+    res.contentType(mediaPost.linkType);
+    res.send(mediaPost.link.data);
   });
 });
 

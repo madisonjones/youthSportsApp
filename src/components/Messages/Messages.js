@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "../Carousel"
 require("./Messages.css");
 
 class Messages extends React.Component {
@@ -83,6 +84,9 @@ class Messages extends React.Component {
         <div className="modal-dialog modal-lg">
           <div className="modal-content customPopup">
             <form>
+              <div className="form-group">
+                <Carousel />
+              </div>
               <div className="form-group">
                 <label for="exampleTextarea">Title</label>
                 <input

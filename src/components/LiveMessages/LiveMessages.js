@@ -12,22 +12,22 @@ class Messages extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3333/api/live/videos") 
-      .then(response => response.json())
-      .then(videos =>
-        this.setState({
-          videos: videos
-        })
-      );
+    // fetch("http://localhost:3333/api/live/videos") 
+    //   .then(response => response.json())
+    //   .then(videos =>
+    //     this.setState({
+    //       videos: videos
+    //     })
+    //   );
 
 
-      fetch("http://localhost:3333/api/live/images")
-      .then(response => response.json())
-      .then(imgs =>
-        this.setState({
-          imgs: imgs
-        })
-      );
+    //   fetch("http://localhost:3333/api/live/images")
+    //   .then(response => response.json())
+    //   .then(imgs =>
+    //     this.setState({
+    //       imgs: imgs
+    //     })
+    //   );
 
     fetch("http://localhost:3333/api/live/messages")
       .then(response => response.json())

@@ -40,7 +40,7 @@ const LiveFeed = () => {
           role="group"
           aria-label="Basic example"
         >
-          <button
+          {/* <button
             type="button"
             className="btn btn-secondary w-100 p-3 customPostBtn"
             data-toggle="modal"
@@ -49,7 +49,7 @@ const LiveFeed = () => {
             Post Image
           </button>
 
-          <PostImg />
+          <PostImg /> */}
 
           <button
             type="button"
@@ -61,7 +61,7 @@ const LiveFeed = () => {
           </button>
           <PostMessage />
 
-          <button
+          {/* <button
             type="button"
             className="btn btn-secondary w-100 p-3 customPostBtn"
             data-toggle="modal"
@@ -69,7 +69,7 @@ const LiveFeed = () => {
           >
             Post Video
           </button>
-          <PostVideo />
+          <PostVideo /> */}
         </div>
         <div
           className="container d-flex align-items-center "
